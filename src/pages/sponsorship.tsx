@@ -1,0 +1,68 @@
+import React from "react";
+import Layout from "@/components/Layout";
+
+import "../assets/css/sponsorship.css";
+
+const Sponsorship: React.FC = () => {
+  return (
+    <>
+      <Layout name="Sponsorship">
+        {/* image */}
+        <div className="mb-10">
+          <div className="max-w-auto h-[48rem] mt-10 bg-gray-500"></div>
+        </div>
+        {/* content */}
+        <div className="border-thin mt-5 pt-5">
+          <div>
+            <h1 className="text-5xl">Interested in Sponsorship?</h1>
+            <p className="text-lg text-light mt-5">
+              Partner with Cornell Data Science (CDS) to collaborate with
+              passionate students dedicated to advancing the frontiers of data
+              science and machine learning. By sponsoring CDS, you will engage
+              with top-tier talent working on innovative projects that span
+              across various industries and applications. Enjoy a wide range of
+              benefits including direct access to our project showcases,
+              recruitment opportunities, and the chance to shape the future of
+              data science education and research at Cornell. Join us in our
+              mission to promote and enhance the field of data science and
+              machine learning, and play a pivotal role in nurturing the next
+              generation of data scientists and engineers. For more information,
+              on our sponsorship opportunities, please refer to our sponsorship
+              packet below.
+              <br></br>
+              <br></br>
+              For sponsorship inquiries, please contact our E-Board at{" "}
+              <a
+                className="text-bold text-blue-500"
+                href="mailto:cornelldatascience@gmail.com"
+                target="_blank"
+              >
+                cornelldatascience@gmail.com
+              </a>
+              .
+            </p>
+          </div>
+        </div>
+        <div className="border-thin mt-14 pt-5">
+          <div>
+            <h1 className="text-5xl">Sponsorship Packet</h1>
+            <iframe
+              src="https://drive.google.com/file/d/1Osw0XNsTBda7p03qceMSErBJ0om9ofWV/preview"
+              className="w-full h-[800px] mt-10"
+              allow="autoplay"
+            ></iframe>
+            <a
+              href="https://drive.google.com/uc?export=download&id=1Osw0XNsTBda7p03qceMSErBJ0om9ofWV"
+              download="sponsorship-packet-fa24.pdf"
+              className="mt-5 inline-block border border-black bg-transparent text-black py-2 px-4"
+            >
+              Download Sponsorship Packet
+            </a>
+          </div>
+        </div>
+      </Layout>
+    </>
+  );
+};
+
+export default Sponsorship;
