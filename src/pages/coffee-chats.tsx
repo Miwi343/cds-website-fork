@@ -31,7 +31,10 @@ const CoffeeChat: React.FC = () => {
         <div className="border-thin mt-14 pt-5">
           <div>
             <h1 className="text-5xl">CDS Coffee-Chat Signups</h1>
-            <p className="text-xl text-light mt-5">Coming Soon...</p>
+            <iframe
+              className="w-full h-[50rem] mt-5 border border-black"
+              src="https://docs.google.com/spreadsheets/d/1O88TvaQxiFqdyy_mCVtE8mnWeONTjXFSVSw7A-oYyoc/pubhtml?widget=true&amp;headers=false"
+            ></iframe>
           </div>
         </div>
       </Layout>
