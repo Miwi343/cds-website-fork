@@ -111,7 +111,7 @@ export default function Home() {
               <div className="text-xl sm:text-3xl font-light">
                 We work on projects that span the spectrum of data science. From
                 applied deep learning to user-friendly visualizations, there is
-                likely someone in CDS working on it.
+                likely someone on CDS working on it.
               </div>
               <div className="w-full h-56 sm:h-96 mt-4 sm:mt-16 bg-gray-500"></div>
             </div>
