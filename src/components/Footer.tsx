@@ -82,17 +82,23 @@ const Footer: React.FC<FooterProps> = (props) => {
         </div>
         <div className="flex flex-col space-y-1">
           <p className="text-xs text-gray-400">SUBTEAMS</p>
-          <Link href="/data-engineering" className="hover:text-gray-300">
+          <Link
+            href="/subteam/data-engineering"
+            className="hover:text-gray-300"
+          >
             Data Engineering
           </Link>
-          <Link href="/data-science" className="hover:text-gray-300">
+          <Link href="/subteam/data-science" className="hover:text-gray-300">
             Data Science
           </Link>
-          <Link href="/quantitative-fiannce" className="hover:text-gray-300">
+          <Link
+            href="/subteam/quantitative-finance"
+            className="hover:text-gray-300"
+          >
             Quantitative Finance
           </Link>
           <Link
-            href="/machine-learning-engineering"
+            href="/subteam/machine-learning-engineering"
             className="hover:text-gray-300"
           >
             Machine Learning Engineering

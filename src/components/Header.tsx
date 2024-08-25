@@ -351,19 +351,22 @@ const Header: React.FC<HeaderProps> = ({ isHome }) => {
                     key={project.id}
                     className={`group transition-opacity duration-500`}
                   >
-                    <p className="text-sm text-gray-300 mb-2 group-hover:text-gray-400">
-                      {project.title}
-                    </p>
-                    <img
-                      src={project.img.src}
-                      alt="Project Image"
-                      className="w-full h-48 object-cover mb-2 group-hover:opacity-75 transition-opacity duration-300"
-                      width={40}
-                      height={40}
-                    />
-                    <p className="text-sm text-gray-100 group-hover:text-gray-400 transition-colors duration-300">
-                      {project.description}
-                    </p>
+                    {/* TODO: Project specific page/url */}
+                    <Link href="/projects">
+                      <p className="text-sm text-gray-300 mb-2 group-hover:text-gray-400">
+                        {project.title}
+                      </p>
+                      <img
+                        src={project.img.src}
+                        alt="Project Image"
+                        className="w-full h-48 object-cover mb-2 group-hover:opacity-75 transition-opacity duration-300"
+                        width={40}
+                        height={40}
+                      />
+                      <p className="text-sm text-gray-100 group-hover:text-gray-400 transition-colors duration-300">
+                        {project.description}
+                      </p>
+                    </Link>
                   </div>
                 ))}
               </div>
