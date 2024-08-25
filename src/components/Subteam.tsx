@@ -27,7 +27,7 @@ const SubteamView: React.FC<{ members: Member[] }> = ({ members }) => {
               </div>
               <div className="text-sm mt-5 text-gray-500 whitespace-nowrap">
                 {/* {member.description} */}
-                Learn More
+                {/* Learn More */}
               </div>
             </div>
           ))}

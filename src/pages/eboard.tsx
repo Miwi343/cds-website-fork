@@ -63,7 +63,7 @@ const Eboard: React.FC = () => {
             {eboardMembers.map((member, index) => (
               <div key={index} className="p-4">
                 <div className="text-sm mb-2 text-gray-400">{member.title}</div>
-                <div className="w-full h-56 bg-gray-500 mb-4">
+                <div className="w-full h-60 bg-gray-500 mb-4">
                   {/* <img src={member.img} alt="" className="w-full h-56 mb-4"></img> */}
                 </div>
                 <div className="text-3xl md:text-4xl text-light">
@@ -71,7 +71,7 @@ const Eboard: React.FC = () => {
                 </div>
                 <div className="text-sm mt-5 text-gray-500">
                   {/* {member.description} */}
-                  Learn More
+                  {/* Learn More */}
                 </div>
               </div>
             ))}
