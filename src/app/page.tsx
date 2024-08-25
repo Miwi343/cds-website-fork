@@ -142,9 +142,11 @@ export default function Home() {
                 Driving innovation and excellence through specialized subteams.
               </div>
               <div className="mt-10 mb-12 sm:mb-10">
-                <button className="border border-white text-white py-2 px-8 text-lg sm:text-xl hover:bg-white hover:text-[#1e1f2b] transition-colors duration-300">
-                  Learn More
-                </button>
+                <Link href="/subteams">
+                  <button className="border border-white text-white py-2 px-8 text-lg sm:text-xl hover:bg-white hover:text-[#1e1f2b] transition-colors duration-300">
+                    Learn More
+                  </button>
+                </Link>
               </div>
             </div>
             <ul className="list-none text-xl lg:text-5xl sm:text-3xl font-light flex-1 w-full max-w-7xl mx-auto">
