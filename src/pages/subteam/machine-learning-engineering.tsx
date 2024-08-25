@@ -6,19 +6,19 @@ import Subteam from "@/components/Subteam";
 const members = [
   {
     title: "Subteam Lead",
-    name: "Andy He",
+    name: "Arnav Agrawal",
     description: "Sample Text",
     img: "",
   },
   {
     title: "Subteam Lead",
-    name: "Mei Lin Hu",
+    name: "Everett Lee",
     description: "Sample Text",
     img: "",
   },
   {
     title: "Member",
-    name: "Arnav Agrawal",
+    name: "Andy He",
     description: "Sample Text",
     img: "",
   },
@@ -42,7 +42,7 @@ const members = [
   },
   {
     title: "Member",
-    name: "Everett Lee",
+    name: "Mei Lin Hu",
     description: "Sample Text",
     img: "",
   },
