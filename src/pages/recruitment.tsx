@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "@/components/Layout";
 
 import "../assets/css/recruitment.css";
+import img from "../assets/img/team2.png";
 
 const Recruitment: React.FC = () => {
   return (
@@ -10,7 +11,8 @@ const Recruitment: React.FC = () => {
         <div>
           {/* image */}
           <div className="mb-15">
-            <div className="max-w-auto h-[48rem] mt-16 bg-gray-500"></div>
+            {/* <div className="max-w-auto h-[48rem] mt-16 bg-gray-500"></div> */}
+            <img src={img.src} alt="team" className="w-full h-[60rem] mt-16" />
           </div>
           {/* content */}
           <div className="border-thin mt-10 pt-10">

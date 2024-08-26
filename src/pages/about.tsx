@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "@/components/Layout";
 import "../assets/css/about.css";
+import img from "../assets/img/team4.jpg";
 
 const About: React.FC = () => {
   return (
@@ -9,7 +10,7 @@ const About: React.FC = () => {
         <div>
           {/* image */}
           <div className="mb-10">
-            <div className="max-w-auto h-[48rem] mt-16 bg-gray-500"></div>
+            <img src={img.src} alt="hero" className="w-full h-[40rem] mt-16" />
           </div>
           {/* content */}
           <div className="border-thin mt-5 pt-5">

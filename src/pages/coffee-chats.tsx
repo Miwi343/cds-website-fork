@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "@/components/Layout";
 import "../assets/css/coffeechat.css";
+import gates from "../assets/img/gates.jpg";
 
 const CoffeeChat: React.FC = () => {
   return (
@@ -8,7 +9,11 @@ const CoffeeChat: React.FC = () => {
       <Layout name="Coffee Chats">
         {/* image */}
         <div className="mb-10">
-          <div className="max-w-auto h-[48rem] mt-10 bg-gray-500"></div>
+          <img
+            src={gates.src}
+            alt="Coffee Chats"
+            className="w-full h-[30rem] mt-10"
+          />
         </div>
         {/* content */}
         <div className="border-thin mt-5 pt-5">

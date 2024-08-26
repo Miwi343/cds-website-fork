@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "@/components/Layout";
 
 import "../assets/css/contact.css";
+import img from "../assets/img/contact.jpg";
 
 const Contact: React.FC = () => {
   return (
@@ -10,7 +11,11 @@ const Contact: React.FC = () => {
         <div>
           {/* image */}
           <div className="mb-24">
-            <div className="max-w-auto h-[24rem] bg-gray-500"></div>
+            <img
+              src={img.src}
+              alt="contact"
+              className="w-full h-[45rem] mt-10"
+            />
           </div>
           {/* content */}
           <div className="border-thin mt-10 pt-10">

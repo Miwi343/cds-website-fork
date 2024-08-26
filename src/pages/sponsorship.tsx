@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "@/components/Layout";
 
 import "../assets/css/sponsorship.css";
+import team from "../assets/img/team3.jpg";
 
 const Sponsorship: React.FC = () => {
   return (
@@ -9,7 +10,11 @@ const Sponsorship: React.FC = () => {
       <Layout name="Sponsorship">
         {/* image */}
         <div className="mb-10">
-          <div className="max-w-auto h-[48rem] mt-10 bg-gray-500"></div>
+          <img
+            src={team.src}
+            alt="Sponsorship"
+            className="w-full h-[40rem] mt-10 filter brightness-120"
+          />
         </div>
         {/* content */}
         <div className="border-thin mt-5 pt-5">

@@ -8,6 +8,10 @@ import coloredLogo from "../assets/img/logo_colored.png";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+import team1 from "../assets/img/team1.jpg";
+import lec from "../assets/img/lec.jpg";
+import lec2 from "../assets/img/lec2.jpg";
+
 import "../assets/css/page.css";
 
 export default function Home() {
@@ -119,7 +123,11 @@ export default function Home() {
                 intersection of theory and application, and contribute to the
                 greater community initiatives.
               </div>
-              <div className="w-full h-56 sm:h-96 mt-4 sm:mt-16 bg-gray-500"></div>
+              <img
+                src={team1.src}
+                alt="Team"
+                className="w-full h-56 sm:h-96 mt-4 sm:mt-16"
+              />
             </div>
           </div>
           <div className="flex flex-col sm:flex-row items-start space-x-0 sm:space-x-12 mt-12 sm:mt-48">
@@ -134,7 +142,11 @@ export default function Home() {
                 applied deep learning to user-friendly visualizations, there is
                 likely someone on CDS working on it.
               </div>
-              <div className="w-full h-56 sm:h-96 mt-4 sm:mt-16 bg-gray-500"></div>
+              <img
+                src={lec.src}
+                alt="Lecture"
+                className="w-full h-56 sm:h-96 mt-4 sm:mt-16"
+              />
             </div>
           </div>
           <div className="flex flex-col sm:flex-row items-start space-x-0 sm:space-x-12 mt-12 sm:mt-48">
@@ -151,7 +163,11 @@ export default function Home() {
                 talks, and mentoring sessions to learn more about careers in
                 data science.
               </div>
-              <div className="w-full h-56 sm:h-96 mt-4 sm:mt-16 bg-gray-500"></div>
+              <img
+                src={lec2.src}
+                alt="Lecture"
+                className="w-full h-56 sm:h-96 mt-4 sm:mt-16"
+              />
             </div>
           </div>
         </section>

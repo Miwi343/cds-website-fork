@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "@/components/Layout";
 import "../assets/css/informationsessions.css";
+import info from "../assets/img/info.jpg";
 
 const InformationSessions: React.FC = () => {
   return (
@@ -8,7 +9,11 @@ const InformationSessions: React.FC = () => {
       <Layout name="Information Sessions">
         {/* image */}
         <div className="mb-10">
-          <div className="max-w-auto h-[48rem] mt-10 bg-gray-500"></div>
+          <img
+            src={info.src}
+            alt="Information Sessions"
+            className="max-w-auto h-[15rem] mt-10"
+          />
         </div>
         {/* content */}
         <div className="border-thin mt-5 pt-5">

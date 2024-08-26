@@ -6,6 +6,7 @@ import "../assets/css/projects.css";
 
 import trivaiImg from "../assets/img/trivai.png";
 import millenniumImg from "../assets/img/millennium.png";
+import img from "../assets/img/projects.jpg";
 
 const projects = [
   {
@@ -29,7 +30,11 @@ const About: React.FC = () => {
         <div>
           {/* image */}
           <div className="mb-15">
-            <div className="max-w-auto h-[48rem] mt-16 bg-gray-500"></div>
+            <img
+              src={img.src}
+              alt="project"
+              className="w-full h-[48rem] mt-16 "
+            />
           </div>
           {/* content */}
           <div className="border-thin mt-10 pt-10">

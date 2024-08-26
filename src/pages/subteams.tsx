@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "@/components/Layout";
 import "../assets/css/subteam.css";
+import img from "../assets/img/subteam.jpg";
 
 const Subteams: React.FC = () => {
   return (
@@ -8,7 +9,11 @@ const Subteams: React.FC = () => {
       <Layout name="Subteams">
         {/* image */}
         <div className="mb-10">
-          <div className="max-w-auto h-[48rem] mt-10 bg-gray-500"></div>
+          <img
+            src={img.src}
+            alt="subteams"
+            className="w-full h-[42rem] mt-10"
+          />
         </div>
         {/* content */}
         <div className="border-thin mt-5 pt-5">

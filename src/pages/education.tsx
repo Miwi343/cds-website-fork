@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "@/components/Layout";
 
+import img from "../assets/img/edu.jpg";
 import "../assets/css/education.css";
 
 const Education: React.FC = () => {
@@ -10,7 +11,7 @@ const Education: React.FC = () => {
         <div>
           {/* image */}
           <div className="mb-15">
-            <div className="max-w-auto h-[48rem] mt-16 bg-gray-500"></div>
+            <img src={img.src} alt="hero" className="w-full h-[55rem] mt-10" />
           </div>
           {/* content */}
           <div className="border-thin mt-10 pt-10">
