@@ -10,7 +10,11 @@ const About: React.FC = () => {
         <div>
           {/* image */}
           <div className="mb-10">
-            <img src={img.src} alt="hero" className="w-full h-[40rem] mt-16" />
+            <img
+              src={img.src}
+              alt="hero"
+              className="w-full h-[13rem] sm:h-[30rem] md:h-[40rem] mt-16"
+            />{" "}
           </div>
           {/* content */}
           <div className="border-thin mt-5 pt-5">

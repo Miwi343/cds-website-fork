@@ -12,7 +12,11 @@ const Recruitment: React.FC = () => {
           {/* image */}
           <div className="mb-15">
             {/* <div className="max-w-auto h-[48rem] mt-16 bg-gray-500"></div> */}
-            <img src={img.src} alt="team" className="w-full h-[60rem] mt-16" />
+            <img
+              src={img.src}
+              alt="team"
+              className="w-full h-[20rem] sm:h-[30rem] md:h-[60rem] mt-10"
+            />
           </div>
           {/* content */}
           <div className="border-thin mt-10 pt-10">

@@ -8,11 +8,11 @@ const InformationSessions: React.FC = () => {
     <>
       <Layout name="Information Sessions">
         {/* image */}
-        <div className="mb-10">
+        <div className="mb-5">
           <img
             src={info.src}
             alt="Information Sessions"
-            className="max-w-auto h-[15rem] mt-10"
+            className="w-full h-[7rem] sm:h-[30rem] md:h-[15rem] mt-10"
           />
         </div>
         {/* content */}

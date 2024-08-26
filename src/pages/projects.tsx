@@ -33,7 +33,7 @@ const About: React.FC = () => {
             <img
               src={img.src}
               alt="project"
-              className="w-full h-[48rem] mt-16 "
+              className="w-full h-[17rem] sm:h-[30rem] md:h-[48rem] mt-16"
             />
           </div>
           {/* content */}

@@ -11,7 +11,11 @@ const Education: React.FC = () => {
         <div>
           {/* image */}
           <div className="mb-15">
-            <img src={img.src} alt="hero" className="w-full h-[55rem] mt-10" />
+            <img
+              src={img.src}
+              alt="hero"
+              className="w-full h-[16rem] sm:h-[30rem] md:h-[55rem] mt-10"
+            />
           </div>
           {/* content */}
           <div className="border-thin mt-10 pt-10">

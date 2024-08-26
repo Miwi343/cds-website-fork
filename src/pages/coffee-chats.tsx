@@ -12,7 +12,7 @@ const CoffeeChat: React.FC = () => {
           <img
             src={gates.src}
             alt="Coffee Chats"
-            className="w-full h-[30rem] mt-10"
+            className="w-full h-[25rem] sm:h-[30rem] md:h-[30rem] mt-10"
           />
         </div>
         {/* content */}

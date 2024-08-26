@@ -10,11 +10,11 @@ const Contact: React.FC = () => {
       <Layout name="Contact Us">
         <div>
           {/* image */}
-          <div className="mb-24">
+          <div className="mb-12">
             <img
               src={img.src}
               alt="contact"
-              className="w-full h-[45rem] mt-10"
+              className="w-full h-[13rem] sm:h-[30rem] md:h-[45rem] mt-10"
             />
           </div>
           {/* content */}
