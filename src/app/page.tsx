@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 import whiteLogo from "../assets/img/logo.png";
@@ -11,6 +11,27 @@ import Footer from "@/components/Footer";
 import "../assets/css/page.css";
 
 export default function Home() {
+  const [isHome, setIsHome] = useState(true);
+
+  // handle header color state
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroHeight = document.querySelector(".hero")?.clientHeight || 0;
+      if (window.scrollY > heroHeight) {
+        setIsHome(false);
+      } else {
+        setIsHome(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   // fade in animation
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -37,7 +58,7 @@ export default function Home() {
       <main className="relative w-full min-h-screen flex flex-col justify-end bg-cover bg-center">
         <title>Home | Cornell Data Science</title>
         <div className="">
-          <Header isHome={true} />
+          <Header isHome={isHome} />
         </div>
         <div className="hero relative w-full min-h-screen flex flex-col items-center justify-center text-white">
           {/* darken image filter */}
@@ -45,7 +66,7 @@ export default function Home() {
           <div className="font-light box-mobile absolute bottom-4 right-4 p-4 flex flex-col space-y-2 text-xs md:text-xs sm:text-xs">
             <div className="flex items-center">
               <div className="p-2 border-l border-white">
-                <p>LAST UPDATED: AUGUST 21ST, 2024</p>
+                <p>LAST UPDATED: AUGUST 25TH, 2024</p>
               </div>
             </div>
             <div className="flex items-center">
