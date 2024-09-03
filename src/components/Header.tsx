@@ -290,6 +290,9 @@ const Header: React.FC<HeaderProps> = ({ isHome }) => {
                   <Link href="/projects">Projects</Link>
                 </div>
                 <div className="text-white mt-2 hover:text-gray-400 transition-colors duration-300">
+                  <Link href="/eboard">E-Board</Link>
+                </div>
+                <div className="text-white mt-2 hover:text-gray-400 transition-colors duration-300">
                   <Link href="/subteams">Our Subteams</Link>
                 </div>
                 <div className="space-y-5 mt-2">
@@ -313,9 +316,6 @@ const Header: React.FC<HeaderProps> = ({ isHome }) => {
                       <FontAwesomeIcon icon={faArrowRight} /> DS
                     </Link>
                   </div>
-                </div>
-                <div className="text-white mt-2 hover:text-gray-400 transition-colors duration-300">
-                  <Link href="/eboard">E-Board</Link>
                 </div>
                 <div className="text-white mt-2 hover:text-gray-400 transition-colors duration-300">
                   <Link href="/education">Education</Link>
