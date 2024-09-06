@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagram,
   faGithub,
-  faFacebook,
+  // faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
@@ -34,14 +34,14 @@ const Footer: React.FC<FooterProps> = (props) => {
             >
               <FontAwesomeIcon icon={faGithub} size="lg" />
             </Link>
-            <Link
+            {/* <Link
               href="https://www.facebook.com/CornellDataScience"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600"
             >
               <FontAwesomeIcon icon={faFacebook} size="lg" />
-            </Link>
+            </Link> */}
             <Link
               href="mailto:cornelldatascience@gmail.com"
               className="text-red-500"
