@@ -42,8 +42,8 @@ const InformationSessions: React.FC = () => {
                 - 6:30 pm, Hollister B14
               </li>
               <li>
-                Information Session #2: TBD
-                {/* September 3rd // 5:00 pm - 6:30 pm, Gates G01 (TBD) */}
+                Information Session #2 (Freshmen/Transfers): September 9th &
+                September 26th // 5:30 pm - 6:00 pm, Gates G01
               </li>
               <li>
                 Cornell Annual Project Team Fest: September 5th // 5:00 pm -
