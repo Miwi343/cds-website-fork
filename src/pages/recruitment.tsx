@@ -129,7 +129,7 @@ const Recruitment: React.FC = () => {
                       target="_blank"
                       href="https://www.engineering.cornell.edu/cornell-engineering-student-project-teams-join-a-team#team-specific-applications"
                     >
-                      CDS Recruitment Application
+                      CDS Recruitment Application (FY/TSF)
                     </a>
                     .
                   </li>
