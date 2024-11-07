@@ -1,21 +1,90 @@
 "use client";
 
+// dependencies
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
+// logo
 import whiteLogo from "../assets/img/logo.png";
 import coloredLogo from "../assets/img/logo_colored.png";
+
+// components
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+// images
 import team1 from "../assets/img/team1.jpg";
 import lec from "../assets/img/lec.jpg";
 import lec2 from "../assets/img/lec2.jpg";
 
+// sponsors
+import verizon from "../assets/img/sponsors/verizon.png";
+import boeing from "../assets/img/sponsors/boeing.png";
+import google from "../assets/img/sponsors/google.png";
+import meta from "../assets/img/sponsors/meta.svg";
+import blackrock from "../assets/img/sponsors/blackrock.png";
+import carnival from "../assets/img/sponsors/carnival.png";
+import dataiku from "../assets/img/sponsors/dataiku.png";
+import ibm from "../assets/img/sponsors/ibm.png";
+import microsoft from "../assets/img/sponsors/microsoft.png";
+import millennium from "../assets/img/sponsors/millennium.png";
+import pfizer from "../assets/img/sponsors/pfizer.png";
+import munich from "../assets/img/sponsors/munich.png";
+import wayfair from "../assets/img/sponsors/wayfair.png";
+import pg from "../assets/img/sponsors/pg.png";
+
 import "../assets/css/page.css";
+
+const sponsors = [
+  millennium.src,
+  verizon.src,
+  google.src,
+  meta.src,
+  microsoft.src,
+  ibm.src,
+  blackrock.src,
+  carnival.src,
+  dataiku.src,
+  boeing.src,
+  pfizer.src,
+  munich.src,
+  wayfair.src,
+  pg.src,
+];
 
 export default function Home() {
   const [isHome, setIsHome] = useState(true);
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 7,
+    slidesToScroll: 2,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        // tablets + larger
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        // mobile
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
   // handle header color state
   useEffect(() => {
@@ -106,8 +175,20 @@ export default function Home() {
           </div>
         </div>
 
+        <section className="w-full flex flex-col p-6 sm:p-24 bg-grey">
+          <div>
+            <Slider {...settings}>
+              {sponsors.map((image, index) => (
+                <div key={index} className="carousel-item">
+                  <img src={image} alt={`Slide ${index + 1}`} />
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </section>
+
         <section className="w-full flex flex-col p-6 sm:p-24 bg-[#efefef]">
-          <div className="flex flex-col sm:flex-row items-start space-x-0 sm:space-x-12 mt-12 sm:mt-48">
+          <div className="flex flex-col sm:flex-row items-start space-x-0 sm:space-x-12 mt-12 sm:mt-24">
             <div className="relative w-full sm:w-1/2">
               <div className="text-3xl sm:text-7xl before:content-[''] before:absolute before:top-[-15px] sm:before:top-[-30px] before:left-0 before:w-full before:border-t before:border-black">
                 Empowering Data <br />
@@ -171,7 +252,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
         <section className="w-full flex flex-col p-6 sm:p-24 pt-12 sm:pt-24 bg-[#1e1f2b] text-[#454256]">
           <div className="flex flex-col sm:flex-row w-full space-x-0 sm:space-x-12 h-full">
             <div className="w-full sm:w-1/3">
