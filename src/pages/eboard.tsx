@@ -2,54 +2,63 @@ import React from "react";
 import Layout from "@/components/Layout";
 import "../assets/css/about.css";
 
+import KojiImg from "../assets/img/members/KojiKimura.jpg";
+import AbbyImg from "../assets/img/members/AbigailKim.jpg";
+import AudreyImg from "../assets/img/members/AudreyWang.jpg";
+import RyanImg from "../assets/img/members/default.jpg";
+import MichaelImg from "../assets/img/members/MichaelNgo.jpg";
+import MaxImg from "../assets/img/members/MaxWang.jpg";
+import CindyImg from "../assets/img/members/CindyLi.jpg";
+import DenizImg from "../assets/img/members/DenizBoloni-Turgut.jpg";
+
 const eboardMembers = [
   {
     title: "President",
     name: "Koji Kimura",
     description: "Sample Text",
-    img: "",
+    img: KojiImg,
   },
   {
     title: "Vice President",
     name: "Abigail Kim",
     description: "Sample Text",
-    img: "",
+    img: AbbyImg,
   },
   {
     title: "Business Chair",
     name: "Audrey Wang",
     description: "Sample Text",
-    img: "",
+    img: AudreyImg,
   },
   {
     title: "Technical Chair",
     name: "Ryan Ho",
     description: "Sample Text",
-    img: "",
+    img: RyanImg,
   },
   {
     title: "Onboarding Chair",
     name: "Michael Ngo",
     description: "Sample Text",
-    img: "",
+    img: MichaelImg,
   },
   {
     title: "Social Chair",
     name: "Max Wang",
     description: "Sample Text",
-    img: "",
+    img: MaxImg,
   },
   {
     title: "Publicity Chair",
     name: "Cindy Li",
     description: "Sample Text",
-    img: "",
+    img: CindyImg,
   },
   {
     title: "Education Chair",
     name: "Deniz BT",
     description: "Sample Text",
-    img: "",
+    img: DenizImg,
   },
 ];
 
@@ -63,10 +72,14 @@ const Eboard: React.FC = () => {
             {eboardMembers.map((member, index) => (
               <div key={index} className="p-4">
                 <div className="text-sm mb-2 text-gray-400">{member.title}</div>
-                <div className="w-full h-60 bg-gray-500 mb-4">
-                  {/* <img src={member.img} alt="" className="w-full h-56 mb-4"></img> */}
-                </div>
-                <div className="text-3xl md:text-4xl text-light">
+                {/* <div className="w-full h-60 bg-gray-500 mb-4"> */}
+                <img
+                  src={member.img.src}
+                  alt={member.name}
+                  className="w-full mb-4"
+                ></img>
+                {/* </div> */}
+                <div className="text-3xl md:text-3xl text-light">
                   {member.name}
                 </div>
                 <div className="text-sm mt-5 text-gray-500">

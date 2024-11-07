@@ -19,9 +19,7 @@ const SubteamView: React.FC<{ members: Member[] }> = ({ members }) => {
               <div className="text-sm mb-2 text-gray-400 whitespace-nowrap">
                 {member.title}
               </div>
-              <div className="w-full h-56 bg-gray-500 mb-4">
-                {/* <img src={member.img} alt="" className="w-full h-56 mb-4"></img> */}
-              </div>
+              <img src={member.img} alt="" className="w-full mb-4"></img>
               <div className="text-3xl md:text-4xl text-light">
                 {member.name}
               </div>
