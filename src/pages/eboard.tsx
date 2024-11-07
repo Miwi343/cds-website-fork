@@ -16,49 +16,49 @@ const eboardMembers = [
     title: "President",
     name: "Koji Kimura",
     description: "Sample Text",
-    img: KojiImg,
+    img: KojiImg.src,
   },
   {
     title: "Vice President",
     name: "Abigail Kim",
     description: "Sample Text",
-    img: AbbyImg,
+    img: AbbyImg.src,
   },
   {
     title: "Business Chair",
     name: "Audrey Wang",
     description: "Sample Text",
-    img: AudreyImg,
+    img: AudreyImg.src,
   },
   {
     title: "Technical Chair",
     name: "Ryan Ho",
     description: "Sample Text",
-    img: RyanImg,
+    img: RyanImg.src,
   },
   {
     title: "Onboarding Chair",
     name: "Michael Ngo",
     description: "Sample Text",
-    img: MichaelImg,
+    img: MichaelImg.src,
   },
   {
     title: "Social Chair",
     name: "Max Wang",
     description: "Sample Text",
-    img: MaxImg,
+    img: MaxImg.src,
   },
   {
     title: "Publicity Chair",
     name: "Cindy Li",
     description: "Sample Text",
-    img: CindyImg,
+    img: CindyImg.src,
   },
   {
     title: "Education Chair",
     name: "Deniz BT",
     description: "Sample Text",
-    img: DenizImg,
+    img: DenizImg.src,
   },
 ];
 
@@ -74,7 +74,7 @@ const Eboard: React.FC = () => {
                 <div className="text-sm mb-2 text-gray-400">{member.title}</div>
                 {/* <div className="w-full h-60 bg-gray-500 mb-4"> */}
                 <img
-                  src={member.img.src}
+                  src={member.img}
                   alt={member.name}
                   className="w-full mb-4"
                 ></img>
