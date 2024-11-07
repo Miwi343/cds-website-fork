@@ -139,7 +139,7 @@ export default function Home() {
           <div className="font-light box-mobile absolute bottom-4 right-4 p-4 flex flex-col space-y-2 text-xs md:text-xs sm:text-xs">
             <div className="flex items-center">
               <div className="p-2 border-l border-white">
-                <p>LAST UPDATED: SEPTEMBER 18TH, 2024</p>
+                <p>LAST UPDATED: NOVEMBER 6TH, 2024</p>
               </div>
             </div>
             <div className="flex items-center">
