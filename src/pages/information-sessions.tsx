@@ -37,7 +37,7 @@ const InformationSessions: React.FC = () => {
           <div>
             <h1 className="text-5xl mb-5">Upcoming Information Sessions</h1>
             <ul className="list-disc pl-5 text-xl">
-              <li>
+              {/* <li>
                 Information Session #1 (Upperclassmen): September 3rd // 5:00 pm
                 - 6:30 pm, Hollister B14
               </li>
@@ -48,7 +48,8 @@ const InformationSessions: React.FC = () => {
               <li>
                 Cornell Annual Project Team Fest: September 5th // 5:00 pm -
                 7:00 pm, Duffield Atrium (TBD)
-              </li>
+              </li> */}
+              <li>Check back later!</li>
             </ul>
           </div>
         </div>

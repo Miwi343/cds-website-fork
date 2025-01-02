@@ -112,6 +112,17 @@ const Recruitment: React.FC = () => {
                 Finance (QF) are open to both freshmen and upperclassmen.{" "}
                 <ul className="list-disc pl-5">
                   <li>
+                    Interested candidates should complete the{" "}
+                    <a
+                      className="text-blue-500"
+                      href="https://forms.gle/qNEifvefq5EWWdrD9"
+                      target="_blank"
+                    >
+                      Application form
+                    </a>
+                    .
+                  </li>
+                  {/* <li>
                     Interested candidates should begin by completing the{" "}
                     <a
                       className="text-blue-500"
@@ -132,10 +143,11 @@ const Recruitment: React.FC = () => {
                       CDS Recruitment Application (FY/TSF)
                     </a>
                     .
-                  </li>
+                  </li> */}
                 </ul>
                 Post-application, selected candidates will be contacted for
-                interviews. For more details on the application process and to
+                interviews.{" "}
+                {/* For more details on the application process and to
                 access the application forms, please click{" "}
                 <a
                   href="https://www.engineering.cornell.edu/cornell-engineering-student-project-teams-join-a-team"
@@ -145,12 +157,12 @@ const Recruitment: React.FC = () => {
                 >
                   here
                 </a>
-                .
+                . */}
               </div>
               <div className="mt-5 space-y-3">
                 <h1 className="text-3xl">Application Deadlines</h1>
                 <ul className="list-disc pl-5 text-lg">
-                  <li>
+                  {/* <li>
                     The{" "}
                     <strong className="text-bold">first-year/transfer</strong>{" "}
                     student application deadline is{" "}
@@ -164,7 +176,8 @@ const Recruitment: React.FC = () => {
                     <strong className="text-bold text-xl">
                       Thursday, September 5th at 11:59 PM.{" "}
                     </strong>
-                  </li>
+                  </li> */}
+                  <li>Check back later!</li>
                 </ul>
               </div>
             </div>
