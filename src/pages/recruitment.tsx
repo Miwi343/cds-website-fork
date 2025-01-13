@@ -180,17 +180,17 @@ const Recruitment: React.FC = () => {
                   <li>
                     <strong className="text-bold text-xl">
                       Thursday, January 30th, 2025 at 11:59 PM EST
-                    </strong> - Written Applications Due
+                    </strong><strong className="text-bold"> - Written Applications Due</strong>
                   </li>
                   <li>
                     <strong className="text-bold text-xl">
                       Wednesday, February 5th, 2025 at 11:59 PM EST
-                    </strong> - Application Decisions Released
+                    </strong><strong className="text-bold"> - Application Decisions Released</strong>
                   </li>
                   <li>
                     <strong className="text-bold text-xl">
                       Wednesday, February 12th, 2025 at 11:59 PM EST
-                    </strong> - Interview Decisions Released
+                    </strong><strong className="text-bold"> - Interview Decisions Released</strong>
                   </li>
                   {/*<li>Check back later!</li>*/}
                 </ul>
