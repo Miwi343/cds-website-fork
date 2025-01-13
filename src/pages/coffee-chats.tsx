@@ -38,7 +38,7 @@ const CoffeeChat: React.FC = () => {
             <h1 className="text-5xl">CDS Coffee-Chat Signups</h1>
             <iframe
               className="w-full h-[50rem] mt-5 border border-black"
-              src="https://docs.google.com/spreadsheets/d/1wnzIo0nisN32GyRgdeRoPU2lNZ-fRcX50rlWvhXeT6s/pubhtml?widget=true&amp;headers=false"
+              src="https://docs.google.com/spreadsheets/d/1DNg2zXAQTmofeIXuzl_L1rwi8plcY46ebBLxq2D3_6g/pubhtml?widget=true&amp;headers=false"
             ></iframe>
           </div>
         </div>
