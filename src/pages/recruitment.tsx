@@ -177,7 +177,22 @@ const Recruitment: React.FC = () => {
                       Thursday, September 5th at 11:59 PM.{" "}
                     </strong>
                   </li> */}
-                  <li>Check back later!</li>
+                  <li>
+                    <strong className="text-bold text-xl">
+                      Thursday, January 30th, 2025 at 11:59 PM EST
+                    </strong> - Written Applications Due
+                  </li>
+                  <li>
+                    <strong className="text-bold text-xl">
+                      Wednesday, February 5th, 2025 at 11:59 PM EST
+                    </strong> - Application Decisions Released
+                  </li>
+                  <li>
+                    <strong className="text-bold text-xl">
+                      Wednesday, February 12th, 2025 at 11:59 PM EST
+                    </strong> - Interview Decisions Released
+                  </li>
+                  {/*<li>Check back later!</li>*/}
                 </ul>
               </div>
             </div>
