@@ -160,7 +160,7 @@ const Recruitment: React.FC = () => {
                 . */}
               </div>
               <div className="mt-5 space-y-3">
-                <h1 className="text-3xl">Application Deadlines</h1>
+                <h1 className="text-3xl">Application Deadlines (Upperclassmen/Underclassmen)</h1>
                 <ul className="list-disc pl-5 text-lg">
                   {/* <li>
                     The{" "}
