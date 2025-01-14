@@ -114,9 +114,10 @@ const Recruitment: React.FC = () => {
                   <li>
                     Interested candidates should complete the{" "}
                     <a
-                      className="text-blue-500"
+                      className="text-blue-700 font-extrabold text-2xl"
                       href="https://forms.gle/qNEifvefq5EWWdrD9"
                       target="_blank"
+                      style={{ textDecoration: "underline", }}
                     >
                       Application form
                     </a>
