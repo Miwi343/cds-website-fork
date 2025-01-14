@@ -5,11 +5,11 @@ import "../assets/css/about.css";
 import KojiImg from "../assets/img/members/KojiKimura.jpg";
 import AbbyImg from "../assets/img/members/AbigailKim.jpg";
 import AudreyImg from "../assets/img/members/AudreyWang.jpg";
-import RyanImg from "../assets/img/members/default.jpg";
 import MichaelImg from "../assets/img/members/MichaelNgo.jpg";
 import MaxImg from "../assets/img/members/MaxWang.jpg";
 import CindyImg from "../assets/img/members/CindyLi.jpg";
-import DenizImg from "../assets/img/members/DenizBoloni-Turgut.jpg";
+import DanielImg from "../assets/img/members/DanielWang.jpg";
+import SriImg from "../assets/img/members/SrivatsaKundurthy.jpg";
 
 const eboardMembers = [
   {
@@ -34,7 +34,7 @@ const eboardMembers = [
     title: "Technical Chair",
     name: "Ryan Ho",
     description: "Sample Text",
-    img: RyanImg.src,
+    img: DanielImg.src,
   },
   {
     title: "Onboarding Chair",
@@ -58,7 +58,7 @@ const eboardMembers = [
     title: "Education Chair",
     name: "Deniz BT",
     description: "Sample Text",
-    img: DenizImg.src,
+    img: SriImg.src,
   },
 ];
 
