@@ -14,12 +14,14 @@ const projects = [
     description:
       "An iOS application that generates quizzes for users based on any topic.",
     imageUrl: trivaiImg,
+    link: null
   },
   {
     title: "MILLENNIUM X CDS",
     description:
       "Building scalable pipelines for data collection and cleansing, and utilizing quantitative strategies for portfolio construction.",
     imageUrl: millenniumImg,
+    link: null
   },
 ];
 
