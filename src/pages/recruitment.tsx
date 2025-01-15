@@ -105,11 +105,12 @@ const Recruitment: React.FC = () => {
                 This semester, Cornell Data Science is opening recruitment for
                 various subteams, with specific eligibility criteria.{" "}
                 <strong className="text-bold underline">
-                  Our Data Engineering (DE) and Data Science (DS) subteams are{" "}
-                  exclusively recruiting freshmen
+                  Our Data Science (DS) and Quantitative Finance (QF) subteams are{" "}
+                  exclusively recruiting freshmen and sophomore transfers, while Machine
+                  Learning Engineering (MLE) is open to both freshmen and upperclassmen.{" "}
+                  Our Data Engineering (DE) subteam is not recruiting this semester.
                 </strong>
-                , while Machine Learning Engineering (MLE) and Quantitative
-                Finance (QF) are open to both freshmen and upperclassmen.{" "}
+
                 <ul className="list-disc pl-5">
                   <li>
                     Interested candidates should complete the{" "}
