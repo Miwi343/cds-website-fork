@@ -10,19 +10,23 @@ import img from "../assets/img/projects.jpg";
 
 const projects = [
   {
+    semester: "Spring 2023",
     title: "TRIVAI",
     description:
       "An iOS application that generates quizzes for users based on any topic.",
     imageUrl: trivaiImg,
-    link: null
+    link: "https://www.google.com",
+    // tags: ["hey"]
   },
   {
+    semester: "Spring 2023",
     title: "MILLENNIUM X CDS",
     description:
       "Building scalable pipelines for data collection and cleansing, and utilizing quantitative strategies for portfolio construction.",
     imageUrl: millenniumImg,
-    link: null
-  },
+    link: null,
+    // tags: ["yo", "hi"]
+  }
 ];
 
 const About: React.FC = () => {
@@ -60,30 +64,56 @@ const About: React.FC = () => {
               </p>
             </div>
             {/* add sort by team later?, search bar for projects? filterable? */}
-            <div className="cursor-pointer grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-5">
-              {projects.map((project, index) => (
-                <div key={index} className="p-4 pl-0">
-                  <div className="uppercase text-xs text-gray-400 mb-2">
-                    {project.title}
-                  </div>
-                  <div>
-                    {/* image */}
-                    <Image
-                      src={project.imageUrl.src}
-                      alt={project.title}
-                      width={500}
-                      height={224}
-                      className="border transition duration-300 ease-in-out hover:bg-gray-400"
-                    />
-                  </div>
-                  <div>
-                    <h2 className="text-md mt-4 font-light">
-                      {project.description}
-                    </h2>
-                  </div>
+            {[...new Set(projects.map(p => p.semester))].map(semester => (
+              <div key={semester}>
+                <h2 className="text-3xl mt-8 mb-4">{semester}</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-5">
+                  {projects
+                    .filter(p => p.semester === semester)
+                    .map((project, index) => (
+                      <div key={index} className="p-4 pl-0">
+                        <div className="uppercase text-xs text-gray-400 mb-2">
+                          {project.title}
+                        </div>
+                        <div>
+                          {/* image */}
+                          {project.link ? (
+                            <a href={project.link} target="_blank" rel="noopener noreferrer">
+                              <Image
+                                src={project.imageUrl.src}
+                                alt={project.title}
+                                width={500}
+                                height={224}
+                                className="border transition duration-300 ease-in-out hover:bg-gray-400"
+                              />
+                            </a>
+                          ) : (
+                            <Image
+                              src={project.imageUrl.src}
+                              alt={project.title}
+                              width={500}
+                              height={224}
+                              className="border transition duration-300 ease-in-out hover:bg-gray-400"
+                            />
+                          )}
+                        </div>
+                        <div>
+                          <h2 className="text-md mt-4 font-light">
+                            {project.description}
+                          </h2>
+                          <div className="flex flex-wrap gap-2 mt-2">
+                            {/* {project.tags.map((tag, tagIndex) => (
+                              <span key={tagIndex} className="text-xs bg-gray-100 rounded-full px-3 py-1">
+                                {tag}
+                              </span>
+                            ))} */}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </Layout>
