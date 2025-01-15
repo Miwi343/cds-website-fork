@@ -32,7 +32,7 @@ const eboardMembers = [
   },
   {
     title: "Technical Chair",
-    name: "Ryan Ho",
+    name: "Daniel Wang",
     description: "Sample Text",
     img: DanielImg.src,
   },
@@ -56,7 +56,7 @@ const eboardMembers = [
   },
   {
     title: "Education Chair",
-    name: "Deniz BT",
+    name: "Srivatsa Kundurthy",
     description: "Sample Text",
     img: SriImg.src,
   },
