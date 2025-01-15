@@ -1,21 +1,60 @@
 import React from "react";
 import Layout from "@/components/Layout";
 import Image from "next/image";
+import { FaGithub, FaFileAlt } from "react-icons/fa";
 
 import "../assets/css/projects.css";
 
+import vibeSyncImg from "../assets/img/vibesync.png";
+import imdbImg from "../assets/img/imdb.png";
+import pocketmlImg from "../assets/img/pocketml.png";
 import trivaiImg from "../assets/img/trivai.png";
 import millenniumImg from "../assets/img/millennium.png";
 import img from "../assets/img/projects.jpg";
 
 const projects = [
   {
+    semester: "Fall 2024",
+    title: "VibeSync",
+    description: "VibeSync is a research project which aims to explore the boundary of ML research with music. \
+    Inspired by recent advances with contrastive learning and joint language-audio embeddings, we aim to build \
+    a proof-of-concept system where a user specifies a playlist title and receives recommended songs. We want \
+    to see how far take this and what insights we can gain.",
+    imageUrl: vibeSyncImg,
+    githubLink: "https://github.com/CornellDataScience/VibeSync",
+    presentationLink: null,
+    // tags: ["hey"]
+  },
+  {
+    semester: "Fall 2024",
+    title: "imdb",
+    description:
+      "In-Memory Database (IMDb) is an implementation of the Redis protocol.",
+    // more description was not found because didn't find the slides
+    imageUrl: imdbImg,
+    githubLink: "https://github.com/CornellDataScience/imdb",
+    presentationLink: null,
+    // tags: ["hey"]
+  },
+  {
+    semester: "Spring 2024",
+    title: "PocketML",
+    description:
+      "We developed a mobile application and library that reduces overhead of training ML models by allowing users to start, stop, train, monitor, and deploy their models remotely from their mobile device.",
+    imageUrl: pocketmlImg,
+    githubLink: "https://github.com/CornellDataScience/PocketML",
+    presentationLink: null,
+    // tags: ["hey"]
+  },
+
+  {
     semester: "Spring 2023",
     title: "TRIVAI",
     description:
       "An iOS application that generates quizzes for users based on any topic.",
     imageUrl: trivaiImg,
-    link: "https://www.google.com",
+    githubLink: "https://github.com/vibe-sync",
+    presentationLink: null,
     // tags: ["hey"]
   },
   {
@@ -24,7 +63,8 @@ const projects = [
     description:
       "Building scalable pipelines for data collection and cleansing, and utilizing quantitative strategies for portfolio construction.",
     imageUrl: millenniumImg,
-    link: null,
+    githubLink: "https://github.com/vibe-sync",
+    presentationLink: null,
     // tags: ["yo", "hi"]
   }
 ];
@@ -39,7 +79,7 @@ const About: React.FC = () => {
             <img
               src={img.src}
               alt="project"
-              className="w-full h-[17rem] sm:h-[30rem] md:h-[54rem] mt-16"
+              className="w-full h-[17rem] sm:h-[30rem] md:h-[54rem] mt-16 object-cover"
             />
           </div>
           {/* content */}
@@ -72,28 +112,46 @@ const About: React.FC = () => {
                     .filter(p => p.semester === semester)
                     .map((project, index) => (
                       <div key={index} className="p-4 pl-0">
-                        <div className="uppercase text-xs text-gray-400 mb-2">
-                          {project.title}
+                        <div className="flex items-center justify-between uppercase text-base text-gray-400 mb-2">
+                          <span className="text-lg">{project.title}</span>
+                          <div className="flex gap-2">
+                            {project.githubLink ? (
+                              <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="hover:text-gray-600">
+                                <FaGithub size={24} />
+                              </a>
+                            ) : (
+                              <span className="cursor-not-allowed">
+                                <FaGithub size={24} className="text-gray-300" />
+                              </span>
+                            )}
+                            {project.presentationLink ? (
+                              <a href={project.presentationLink} target="_blank" rel="noopener noreferrer" className="hover:text-gray-600">
+                                <FaFileAlt size={24} />
+                              </a>
+                            ) : (
+                              <span className="cursor-not-allowed">
+                                <FaFileAlt size={24} className="text-gray-300" />
+                              </span>
+                            )}
+                          </div>
                         </div>
-                        <div>
+                        <div className="relative h-[224px]">
                           {/* image */}
-                          {project.link ? (
-                            <a href={project.link} target="_blank" rel="noopener noreferrer">
+                          {project.githubLink ? (
+                            <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
                               <Image
                                 src={project.imageUrl.src}
                                 alt={project.title}
-                                width={500}
-                                height={224}
-                                className="border transition duration-300 ease-in-out hover:bg-gray-400"
+                                fill
+                                className="border transition duration-300 ease-in-out hover:bg-gray-400 object-cover"
                               />
                             </a>
                           ) : (
                             <Image
                               src={project.imageUrl.src}
                               alt={project.title}
-                              width={500}
-                              height={224}
-                              className="border transition duration-300 ease-in-out hover:bg-gray-400"
+                              fill
+                              className="border transition duration-300 ease-in-out hover:bg-gray-400 object-cover"
                             />
                           )}
                         </div>
