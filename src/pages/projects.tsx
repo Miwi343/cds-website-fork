@@ -23,7 +23,7 @@ const projects = [
     to see how far take this and what insights we can gain.",
     imageUrl: vibeSyncImg,
     githubLink: "https://github.com/CornellDataScience/VibeSync",
-    presentationLink: null,
+    presentationLink: "https://docs.google.com/presentation/d/1WGN3P-foXxiuJvLCvCNjYIwPKBWLJtSp1TFwnevkUaM",
     // tags: ["hey"]
   },
   {
@@ -164,7 +164,7 @@ const projects = [
     description: "DIGS is a distributed game server that allows users to play games with each other over the internet. We aim to build a proof-of-concept system that can host a variety of games and allow for multiplayer gameplay.",
     imageUrl: "https://opengraph.githubassets.com/1/CornellDataScience/Distributed-Game-Server",
     githubLink: "https://github.com/CornellDataScience/Distributed-Game-Server",
-    presentationLink: null,
+    presentationLink: "https://docs.google.com/presentation/d/1o2LIy7-7N47-8Xv8TBOmxPvxN5Qhwo8paTxtH7GW2Gs",
     // tags: ["yo", "hi"]
   },
   {
