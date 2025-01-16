@@ -13,7 +13,7 @@ const Sponsorship: React.FC = () => {
           <img
             src={team.src}
             alt="Sponsorship"
-            className="w-full h-[12rem] sm:h-[30rem] md:h-[40rem] mt-10 filter brightness-120"
+            className="w-full h-[12rem] sm:h-[30rem] md:h-[40rem] mt-10 filter brightness-120 object-cover"
           />
         </div>
         {/* content */}

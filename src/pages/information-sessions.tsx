@@ -12,7 +12,7 @@ const InformationSessions: React.FC = () => {
           <img
             src={info.src}
             alt="Information Sessions"
-            className="w-full h-[7rem] sm:h-[30rem] md:h-[15rem] mt-10"
+            className="w-full h-[7rem] sm:h-[30rem] md:h-[15rem] mt-10 object-cover"
           />
         </div>
         {/* content */}

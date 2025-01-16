@@ -12,7 +12,7 @@ const Subteams: React.FC = () => {
           <img
             src={img.src}
             alt="subteams"
-            className="w-full h-[13rem] sm:h-[30rem] md:h-[42rem] mt-16"
+            className="w-full h-[13rem] sm:h-[30rem] md:h-[42rem] mt-16 object-cover"
           />
         </div>
         {/* content */}

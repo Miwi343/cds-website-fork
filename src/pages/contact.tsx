@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
             <img
               src={img.src}
               alt="contact"
-              className="w-full h-[13rem] sm:h-[30rem] md:h-[45rem] mt-10"
+              className="w-full h-[13rem] sm:h-[30rem] md:h-[45rem] mt-10 object-cover"
             />
           </div>
           {/* content */}

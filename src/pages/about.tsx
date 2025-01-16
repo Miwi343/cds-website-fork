@@ -13,7 +13,7 @@ const About: React.FC = () => {
             <img
               src={img.src}
               alt="hero"
-              className="w-full h-[13rem] sm:h-[30rem] md:h-[40rem] mt-16"
+              className="w-full h-[13rem] sm:h-[30rem] md:h-[40rem] mt-16 object-cover"
             />{" "}
           </div>
           {/* content */}

@@ -15,7 +15,7 @@ const Recruitment: React.FC = () => {
             <img
               src={img.src}
               alt="team"
-              className="w-full h-[20rem] sm:h-[30rem] md:h-[60rem] mt-10"
+              className="w-full h-[20rem] sm:h-[30rem] md:h-[60rem] mt-10 object-cover"
             />
           </div>
           {/* content */}
