@@ -234,23 +234,15 @@ const About: React.FC = () => {
                         <div className="flex items-center justify-between uppercase text-base text-gray-400 mb-2">
                           <span className="text-lg">{project.title}</span>
                           <div className="flex gap-2">
-                            {project.githubLink ? (
+                            {project.githubLink && (
                               <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="hover:text-gray-600">
                                 <FaGithub size={24} />
                               </a>
-                            ) : (
-                              <span className="cursor-not-allowed">
-                                <FaGithub size={24} className="text-gray-300" />
-                              </span>
                             )}
-                            {project.presentationLink ? (
+                            {project.presentationLink && (
                               <a href={project.presentationLink} target="_blank" rel="noopener noreferrer" className="hover:text-gray-600">
                                 <FaFileAlt size={24} />
                               </a>
-                            ) : (
-                              <span className="cursor-not-allowed">
-                                <FaFileAlt size={24} className="text-gray-300" />
-                              </span>
                             )}
                           </div>
                         </div>
