@@ -285,6 +285,9 @@ const Header: React.FC<HeaderProps> = ({ isHome }) => {
                   <Link href="/projects">Projects</Link>
                 </div>
                 <div className="text-white mt-2 hover:text-gray-400 transition-colors duration-300">
+                  <Link href="/alumni">Alumni</Link>
+                </div>
+                <div className="text-white mt-2 hover:text-gray-400 transition-colors duration-300">
                   <Link href="/eboard">E-Board</Link>
                 </div>
                 <div className="text-white mt-2 hover:text-gray-400 transition-colors duration-300">

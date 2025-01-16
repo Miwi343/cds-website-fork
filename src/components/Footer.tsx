@@ -67,6 +67,9 @@ const Footer: React.FC<FooterProps> = (props) => {
           <Link href="/projects" className="hover:text-gray-300">
             Projects
           </Link>
+          <Link href="/alumni" className="hover:text-gray-300">
+            Alumni
+          </Link>
           <Link href="/subteams" className="hover:text-gray-300">
             Subteams
           </Link>
