@@ -7,8 +7,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 import logo from "../assets/img/logo.png";
-import trivaiImg from "../assets/img/trivai.png";
-import millenniumImg from "../assets/img/millennium.png";
+import imdbImg from "../assets/img/imdb.png";
+import vibesyncImg from "../assets/img/vibesync.png";
 // import Loader from './Loader';
 
 import "../assets/css/header.css";
@@ -86,49 +86,50 @@ const Header: React.FC<HeaderProps> = ({ isHome }) => {
   };
 
   // projects
+
   const projects = [
     {
       id: 1,
-      title: "TRIV AI",
+      title: "imdb",
       description:
-        "An iOS application that generates quizzes for users based on any topic.",
-      img: trivaiImg,
+        "In-Memory Database (IMDb) is an implementation of the Redis protocol.",
+      img: imdbImg,
     },
     {
       id: 2,
-      title: "MILLENNIUM X CDS",
+      title: "VibeSync",
       description:
-        "Building scalable pipelines for data collection and cleansing, and utilizing quantitative strategies for portfolio construction.",
-      img: millenniumImg,
+        "VibeSync is a research project which aims to explore the boundary of ML research with music. \
+    Inspired by recent advances with contrastive learning and joint language-audio embeddings, we aim to build \
+    a proof-of-concept system where a user specifies a playlist title and receives recommended songs. We want \
+    to see how far take this and what insights we can gain.",
+      img: vibesyncImg,
     },
   ];
 
   return (
     <>
       <header
-        className={`fixed top-0 left-1/2 transform -translate-x-1/2 mt-0 sm:mt-5 text-black text-sm p-4 sm:p-4 md:p-4 sm:rounded-lg z-50 max-w-7xl w-full ${
-          isMenuView || isSearchView
-            ? "fixed bg-transparent"
-            : "bg-white bg-opacity-30"
-        }`}
+        className={`fixed top-0 left-1/2 transform -translate-x-1/2 mt-0 sm:mt-5 text-black text-sm p-4 sm:p-4 md:p-4 sm:rounded-lg z-50 max-w-7xl w-full ${isMenuView || isSearchView
+          ? "fixed bg-transparent"
+          : "bg-white bg-opacity-30"
+          }`}
       >
         <div className="w-full flex justify-between items-center h-full">
           <Link href="/">
             <div
-              className={`flex items-center text-black lg:text-lg font-light ${
-                isMenuView || isSearchView
-                  ? "text-white"
-                  : isHome
+              className={`flex items-center text-black lg:text-lg font-light ${isMenuView || isSearchView
+                ? "text-white"
+                : isHome
                   ? "invert"
                   : "text-black"
-              }`}
+                }`}
             >
               <img
                 src={logo.src}
                 alt="CDS Logo"
-                className={`h-10 mr-2 ${
-                  isMenuView || isSearchView ? "" : "invert"
-                }`}
+                className={`h-10 mr-2 ${isMenuView || isSearchView ? "" : "invert"
+                  }`}
               />
               <div className="flex flex-col">
                 <span className="block md:hidden text-3xl text-bold">CDS</span>
@@ -142,13 +143,12 @@ const Header: React.FC<HeaderProps> = ({ isHome }) => {
           <div className="flex items-center">
             <Link href="/recruitment" target="_blank">
               <button
-                className={`px-2 text-xs md:text-base sm:px-10 md:px-24 py-2 mr-2 sm:mr-5 h-10 border flex items-center ${
-                  isMenuView || isSearchView
-                    ? "border-white text-white hover:bg-white hover:text-black"
-                    : isHome
+                className={`px-2 text-xs md:text-base sm:px-10 md:px-24 py-2 mr-2 sm:mr-5 h-10 border flex items-center ${isMenuView || isSearchView
+                  ? "border-white text-white hover:bg-white hover:text-black"
+                  : isHome
                     ? "border-white text-white hover:bg-white hover:text-black"
                     : "text-black border-black hover:bg-black hover:text-white"
-                }`}
+                  }`}
               >
                 Recruitment
                 <svg
@@ -171,30 +171,28 @@ const Header: React.FC<HeaderProps> = ({ isHome }) => {
             {/* search */}
             <button
               onClick={toggleSearchView}
-              className={`w-10 py-2 border flex items-center justify-center group ${
-                isHome && isSearchView
-                  ? "border-white bg-white"
-                  : isMenuView
+              className={`w-10 py-2 border flex items-center justify-center group ${isHome && isSearchView
+                ? "border-white bg-white"
+                : isMenuView
                   ? "border-white hover:bg-white"
                   : isHome
-                  ? "border-white hover:bg-white"
-                  : isSearchView
-                  ? "bg-white border-white"
-                  : "border-black hover:bg-black"
-              }`}
+                    ? "border-white hover:bg-white"
+                    : isSearchView
+                      ? "bg-white border-white"
+                      : "border-black hover:bg-black"
+                }`}
             >
               <svg
-                className={`w-6 h-6 ${
-                  isHome && isSearchView
-                    ? "text-black"
-                    : isMenuView
+                className={`w-6 h-6 ${isHome && isSearchView
+                  ? "text-black"
+                  : isMenuView
                     ? "text-white group-hover:text-black"
                     : isHome
-                    ? "text-white group-hover:text-black"
-                    : isSearchView
-                    ? "bg-white text-black"
-                    : "group-hover:text-white"
-                }`}
+                      ? "text-white group-hover:text-black"
+                      : isSearchView
+                        ? "bg-white text-black"
+                        : "group-hover:text-white"
+                  }`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -217,27 +215,25 @@ const Header: React.FC<HeaderProps> = ({ isHome }) => {
               onClick={toggleMenuView}
               className={`
                                 w-10 py-2 border flex items-center justify-center group 
-                                ${
-                                  isMenuView
-                                    ? "border-white bg-white"
-                                    : isHome
-                                    ? "border-white hover:bg-white"
-                                    : isSearchView
-                                    ? "border-white bg-transparent hover:bg-white"
-                                    : "border-black hover:bg-black"
-                                }
+                                ${isMenuView
+                  ? "border-white bg-white"
+                  : isHome
+                    ? "border-white hover:bg-white"
+                    : isSearchView
+                      ? "border-white bg-transparent hover:bg-white"
+                      : "border-black hover:bg-black"
+                }
                                 `}
             >
               <svg
-                className={`w-6 h-6 ${
-                  isMenuView
-                    ? "text-black"
-                    : isSearchView
+                className={`w-6 h-6 ${isMenuView
+                  ? "text-black"
+                  : isSearchView
                     ? "group-hover:text-black text-white"
                     : isHome
-                    ? "text-white group-hover:text-black"
-                    : "group-hover:text-white"
-                }`}
+                      ? "text-white group-hover:text-black"
+                      : "group-hover:text-white"
+                  }`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -262,20 +258,17 @@ const Header: React.FC<HeaderProps> = ({ isHome }) => {
 
       {/* MenuView start */}
       <div
-        className={`h-screen fixed inset-0 bg-[#1e2124] z-40 ${
-          isMenuView ? "translate-y-0" : "translate-y-full"
-        } overflow-y-auto`}
+        className={`h-screen fixed inset-0 bg-[#1e2124] z-40 ${isMenuView ? "translate-y-0" : "translate-y-full"
+          } overflow-y-auto`}
       >
         <div
-          className={`flex flex-col items-center justify-start mt-10 md:mt-32 transition-opacity duration-700 ${
-            isVisible ? "opacity-100" : "opacity-0"
-          }`}
+          className={`flex flex-col items-center justify-start mt-10 md:mt-32 transition-opacity duration-700 ${isVisible ? "opacity-100" : "opacity-0"
+            }`}
         >
           <div className="flex flex-col md:flex-row w-full max-w-7xl justify-around mt-4 p-4 md:p-0">
             <div
-              className={`flex flex-col w-full md:w-1/3 p-2 mt-10 md:mt-0 md:mx-4 transition-opacity duration-1000 delay-100 ${
-                isVisible ? "opacity-100" : "opacity-0"
-              }`}
+              className={`flex flex-col w-full md:w-1/3 p-2 mt-10 md:mt-0 md:mx-4 transition-opacity duration-1000 delay-100 ${isVisible ? "opacity-100" : "opacity-0"
+                }`}
             >
               <div className="w-full border-t border-white"></div>
               <p className="text-gray-500 mt-4 text-xs">NAVIGATION</p>
@@ -330,9 +323,8 @@ const Header: React.FC<HeaderProps> = ({ isHome }) => {
               </div>
             </div>
             <div
-              className={`flex flex-col w-full md:w-1/3 p-2 mt-10 md:mt-0 md:mx-4 transition-opacity duration-1000 delay-200 ${
-                isVisible ? "opacity-100" : "opacity-0"
-              }`}
+              className={`flex flex-col w-full md:w-1/3 p-2 mt-10 md:mt-0 md:mx-4 transition-opacity duration-1000 delay-200 ${isVisible ? "opacity-100" : "opacity-0"
+                }`}
             >
               <div className="w-full border-t border-white"></div>
               <div className="flex justify-between">
@@ -372,9 +364,8 @@ const Header: React.FC<HeaderProps> = ({ isHome }) => {
               </div>
             </div>
             <div
-              className={`flex flex-col w-full md:w-1/3 p-2 transition-opacity duration-1000 delay-300 ${
-                isVisible ? "opacity-100" : "opacity-0"
-              }`}
+              className={`flex flex-col w-full md:w-1/3 p-2 transition-opacity duration-1000 delay-300 ${isVisible ? "opacity-100" : "opacity-0"
+                }`}
             >
               <div className="w-full border-t border-white"></div>
               <p className="text-gray-500 mt-4 text-xs">QUICK LINKS</p>
@@ -421,9 +412,8 @@ const Header: React.FC<HeaderProps> = ({ isHome }) => {
 
       {/* SearchView start */}
       <div
-        className={`fixed inset-0 bg-[#1e2124] z-40 ${
-          isSearchView ? "translate-y-0" : "translate-y-full"
-        }`}
+        className={`fixed inset-0 bg-[#1e2124] z-40 ${isSearchView ? "translate-y-0" : "translate-y-full"
+          }`}
       >
         <div
           style={{
