@@ -64,7 +64,7 @@ const projects = [
     description:
       "An iOS application that generates quizzes for users based on any topic.",
     imageUrl: trivaiImg,
-    githubLink: "https://github.com/vibe-sync",
+    githubLink: null,
     presentationLink: null,
     // tags: ["hey"]
   },
@@ -74,7 +74,17 @@ const projects = [
     description:
       "Building scalable pipelines for data collection and cleansing, and utilizing quantitative strategies for portfolio construction.",
     imageUrl: millenniumImg,
-    githubLink: "https://github.com/vibe-sync",
+    githubLink: null,
+    presentationLink: null,
+    // tags: ["yo", "hi"]
+  },
+  {
+    semester: "Fall 2022",
+    title: "MathSearch",
+    description:
+      "MathSearch is a next-generation search engine designed to locate equations within PDFs using LaTeX math script. It addresses a major limitation of using CTRL/CMD + F with standard keyboards: the inability to directly search for mathematical symbols (like integrals and summations). Our platform enables users to search equations using LaTeX notation, and we return PDF pages with bounding boxes highlighting the closest matches to the queried equations.",
+    imageUrl: "https://opengraph.githubassets.com/1/CornellDataScience/MathSearch",
+    githubLink: "https://github.com/CornellDataScience/MathSearch",
     presentationLink: null,
     // tags: ["yo", "hi"]
   }
@@ -150,20 +160,38 @@ const About: React.FC = () => {
                           {/* image */}
                           {project.githubLink ? (
                             <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
+                              {typeof project.imageUrl === 'string' ? (
+                                <Image
+                                  src={project.imageUrl}
+                                  alt={project.title}
+                                  fill
+                                  className="border transition duration-300 ease-in-out hover:bg-gray-400 object-contain"
+                                />
+                              ) : (
+                                <Image
+                                  src={project.imageUrl.src}
+                                  alt={project.title}
+                                  fill
+                                  className="border transition duration-300 ease-in-out hover:bg-gray-400 object-cover"
+                                />
+                              )}
+                            </a>
+                          ) : (
+                            typeof project.imageUrl === 'string' ? (
+                              <Image
+                                src={project.imageUrl}
+                                alt={project.title}
+                                fill
+                                className="border transition duration-300 ease-in-out hover:bg-gray-400 object-contain"
+                              />
+                            ) : (
                               <Image
                                 src={project.imageUrl.src}
                                 alt={project.title}
                                 fill
                                 className="border transition duration-300 ease-in-out hover:bg-gray-400 object-cover"
                               />
-                            </a>
-                          ) : (
-                            <Image
-                              src={project.imageUrl.src}
-                              alt={project.title}
-                              fill
-                              className="border transition duration-300 ease-in-out hover:bg-gray-400 object-cover"
-                            />
+                            )
                           )}
                         </div>
                         <div>
