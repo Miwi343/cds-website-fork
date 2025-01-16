@@ -94,6 +94,7 @@ const Header: React.FC<HeaderProps> = ({ isHome }) => {
       description:
         "In-Memory Database (IMDb) is an implementation of the Redis protocol.",
       img: imdbImg,
+      link: "https://github.com/CornellDataScience/imdb"
     },
     {
       id: 2,
@@ -104,6 +105,7 @@ const Header: React.FC<HeaderProps> = ({ isHome }) => {
     a proof-of-concept system where a user specifies a playlist title and receives recommended songs. We want \
     to see how far take this and what insights we can gain.",
       img: vibesyncImg,
+      link: "https://github.com/CornellDataScience/VibeSync"
     },
   ];
 
@@ -343,11 +345,10 @@ const Header: React.FC<HeaderProps> = ({ isHome }) => {
                     key={project.id}
                     className={`group transition-opacity duration-500`}
                   >
-                    {/* TODO: Project specific page/url */}
-                    <Link href="/projects">
-                      <p className="text-sm text-gray-300 mb-2 group-hover:text-gray-400">
-                        {project.title}
-                      </p>
+                    <p className="text-sm text-gray-300 mb-2 group-hover:text-gray-400">
+                      {project.title}
+                    </p>
+                    <Link href={project.link} target="_blank" rel="noopener noreferrer">
                       <img
                         src={project.img.src}
                         alt="Project Image"
@@ -355,10 +356,10 @@ const Header: React.FC<HeaderProps> = ({ isHome }) => {
                         width={40}
                         height={40}
                       />
-                      <p className="text-sm text-gray-100 group-hover:text-gray-400 transition-colors duration-300">
-                        {project.description}
-                      </p>
                     </Link>
+                    <p className="text-sm text-gray-100 group-hover:text-gray-400 transition-colors duration-300">
+                      {project.description}
+                    </p>
                   </div>
                 ))}
               </div>
