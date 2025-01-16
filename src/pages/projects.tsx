@@ -39,7 +39,7 @@ const projects = [
   },
   {
     semester: "Spring 2024",
-    title: "PocketML",
+    title: "Pocket-ML",
     description:
       "We developed a mobile application and library that reduces overhead of training ML models by allowing users to start, stop, train, monitor, and deploy their models remotely from their mobile device.",
     imageUrl: pocketmlImg,
@@ -49,7 +49,7 @@ const projects = [
   },
   {
     semester: "Spring 2024",
-    title: "CaddieAI",
+    title: "Caddie-AI",
     description:
       "We develop a mobile app that uses computer vision to analyze a user's golf swing through their smartphone camera to predict the trajectory and flight of their golf ball. While on the course, would provide caddie-like advice to players to improve their game.",
     imageUrl: caddieaiImg,
@@ -57,7 +57,52 @@ const projects = [
     presentationLink: "https://docs.google.com/presentation/d/1Tuqu8EzWHLV98F4vwd7DsThdhCrnfvQEdh8xi3vZfHY",
     // tags: ["hey"]
   },
-
+  {
+    semester: "Spring 2024",
+    title: "sketchify",
+    description: "Sketchify is a tool that converts color images into infinitely scalable vector sketches for coloring books. Users can either select a portion of an image to convert into a line drawing, or upload their own sketch to receive a similarity score compared to the AI-generated version.",
+    imageUrl: "https://opengraph.githubassets.com/1/CornellDataScience/sketchify",
+    githubLink: null,
+    presentationLink: null,
+    // tags: ["hey"]
+  },
+  {
+    semester: "Spring 2024",
+    title: "MILLENNIUM X CDS",
+    description:
+      "Building scalable pipelines for data collection and cleansing, and utilizing quantitative strategies for portfolio construction.",
+    imageUrl: millenniumImg,
+    githubLink: null,
+    presentationLink: null,
+    // tags: ["yo", "hi"]
+  },
+  {
+    semester: "Fall 2023",
+    title: "Ball-101",
+    description: "Ball-101 builds a service for the community at large + low budget sports programs for Sports Analytics and Stats Tracking.",
+    imageUrl: "https://opengraph.githubassets.com/1/CornellDataScience/Ball-101",
+    githubLink: "https://github.com/CornellDataScience/Ball-101/",
+    presentationLink: null,
+    // tags: ["hey"]
+  },
+  {
+    semester: "Fall 2023",
+    title: "Munch",
+    description: "Munch is a CDS MacrosAI project that aims to build a proof-of-concept system that can classify images in real-time using a mobile device.",
+    imageUrl: "https://opengraph.githubassets.com/1/CornellDataScience/Munch",
+    githubLink: "https://github.com/CornellDataScience/Munch",
+    presentationLink: null,
+    // tags: ["hey"]
+  },
+  {
+    semester: "Spring 2023",
+    title: "Edge-ML",
+    description: "Edge-ML is a project that aims to bring ML to the edge of the network, allowing for faster and more efficient processing of data. We aim to build a proof-of-concept system that can classify images in real-time using a mobile device.",
+    imageUrl: "https://opengraph.githubassets.com/1/CornellDataScience/edge-ml",
+    githubLink: "https://github.com/CornellDataScience/edge-ml",
+    presentationLink: null,
+    // tags: ["hey"]
+  },
   {
     semester: "Spring 2023",
     title: "TRIVAI",
@@ -70,11 +115,10 @@ const projects = [
   },
   {
     semester: "Spring 2023",
-    title: "MILLENNIUM X CDS",
-    description:
-      "Building scalable pipelines for data collection and cleansing, and utilizing quantitative strategies for portfolio construction.",
-    imageUrl: millenniumImg,
-    githubLink: null,
+    title: "DIGS",
+    description: "DIGS is a distributed game server that allows users to play games with each other over the internet. We aim to build a proof-of-concept system that can host a variety of games and allow for multiplayer gameplay.",
+    imageUrl: "https://opengraph.githubassets.com/1/CornellDataScience/Distributed-Game-Server",
+    githubLink: "https://github.com/CornellDataScience/Distributed-Game-Server",
     presentationLink: null,
     // tags: ["yo", "hi"]
   },
@@ -85,6 +129,15 @@ const projects = [
       "MathSearch is a next-generation search engine designed to locate equations within PDFs using LaTeX math script. It addresses a major limitation of using CTRL/CMD + F with standard keyboards: the inability to directly search for mathematical symbols (like integrals and summations). Our platform enables users to search equations using LaTeX notation, and we return PDF pages with bounding boxes highlighting the closest matches to the queried equations.",
     imageUrl: "https://opengraph.githubassets.com/1/CornellDataScience/MathSearch",
     githubLink: "https://github.com/CornellDataScience/MathSearch",
+    presentationLink: null,
+    // tags: ["yo", "hi"]
+  },
+  {
+    semester: "Fall 2021",
+    title: "self-driving-car",
+    description: "CDS Self-Driving Car is a multi-year project undertaken by the Cornell Data Science team intended to demonstrate autopilot for a full-size car. It aims to demonstrate tight integration of a camera based vision algorithm to navigate a car safely. We utilize a SLAM system to localize ourselves, and an additional lane recognition pipeline to see the road. This is all built upon a Python control loop and will leverage robotics to directly actuate the steering wheel to augment a normal car.",
+    imageUrl: "https://opengraph.githubassets.com/1/CornellDataScience/self-driving-car",
+    githubLink: "https://github.com/CornellDataScience/self-driving-car",
     presentationLink: null,
     // tags: ["yo", "hi"]
   }
