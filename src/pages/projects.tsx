@@ -8,6 +8,7 @@ import "../assets/css/projects.css";
 import vibeSyncImg from "../assets/img/vibesync.png";
 import imdbImg from "../assets/img/imdb.png";
 import pocketmlImg from "../assets/img/pocketml.png";
+import caddieaiImg from "../assets/img/caddieai.png";
 import trivaiImg from "../assets/img/trivai.png";
 import millenniumImg from "../assets/img/millennium.png";
 import img from "../assets/img/projects.jpg";
@@ -43,7 +44,17 @@ const projects = [
       "We developed a mobile application and library that reduces overhead of training ML models by allowing users to start, stop, train, monitor, and deploy their models remotely from their mobile device.",
     imageUrl: pocketmlImg,
     githubLink: "https://github.com/CornellDataScience/PocketML",
-    presentationLink: null,
+    presentationLink: "https://docs.google.com/presentation/d/1rTwoFj3Ng_ShNENmgBxngmSYpiLAuZ9hXi9G3X-ORQo",
+    // tags: ["hey"]
+  },
+  {
+    semester: "Spring 2024",
+    title: "CaddieAI",
+    description:
+      "We develop a mobile app that uses computer vision to analyze a user's golf swing through their smartphone camera to predict the trajectory and flight of their golf ball. While on the course, would provide caddie-like advice to players to improve their game.",
+    imageUrl: caddieaiImg,
+    githubLink: null,
+    presentationLink: "https://docs.google.com/presentation/d/1Tuqu8EzWHLV98F4vwd7DsThdhCrnfvQEdh8xi3vZfHY",
     // tags: ["hey"]
   },
 

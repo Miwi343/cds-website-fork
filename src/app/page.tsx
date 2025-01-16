@@ -207,7 +207,7 @@ export default function Home() {
               <img
                 src={team1.src}
                 alt="Team"
-                className="w-full h-56 sm:h-96 mt-4 sm:mt-16"
+                className="w-full h-56 sm:h-96 mt-4 sm:mt-16 object-cover"
               />
             </div>
           </div>
@@ -226,7 +226,7 @@ export default function Home() {
               <img
                 src={lec.src}
                 alt="Lecture"
-                className="w-full h-56 sm:h-96 mt-4 sm:mt-16"
+                className="w-full h-56 sm:h-96 mt-4 sm:mt-16 object-cover"
               />
             </div>
           </div>
@@ -247,7 +247,7 @@ export default function Home() {
               <img
                 src={lec2.src}
                 alt="Lecture"
-                className="w-full h-56 sm:h-96 mt-4 sm:mt-16"
+                className="w-full h-56 sm:h-96 mt-4 sm:mt-16 object-cover"
               />
             </div>
           </div>
