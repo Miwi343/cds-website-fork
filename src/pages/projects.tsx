@@ -38,6 +38,51 @@ const projects = [
     // tags: ["hey"]
   },
   {
+    semester: "Fall 2024",
+    title: "My Course Index v2",
+    description: "My Course Index v2 is a project that aims to build a search engine for edstem for Cornell University. It is a web application that allows users to search for course contents efficiently using natural language.",
+    imageUrl: "https://opengraph.githubassets.com/1/mahithapen/mycourseindex-v2",
+    githubLink: "https://github.com/mahithapen/mycourseindex-v2",
+    presentationLink: null,
+    // tags: ["hey"]
+  },
+  {
+    semester: "Fall 2024",
+    title: "Prediction Markets",
+    description: "Prediction markets allow users to trade contracts based on future event outcomes, using crowd wisdom to generate probability forecasts. Platforms like Kalshi demonstrate how well-calibrated predictions and skilled participants can lead to accurate forecasting of real-world events.",
+    imageUrl: "https://opengraph.githubassets.com/1/CornellDataScience/PredictionMarkets",
+    githubLink: "https://github.com/CornellDataScience/PredictionMarkets",
+    presentationLink: null,
+    // tags: ["hey"]
+  },
+  {
+    semester: "Fall 2024",
+    title: "Millennium X CDS - Data Quality Platform",
+    description: "This project is another collaboration between Millennium and CDS. This project supports a qualitative investment thesis with quantitative evidence and explore different quantitative strategies in finance. The goal is to build pipelines to collect and clean data at scale, perform signal research to construct robust portfolios, and gain insight into industry tools/techniques",
+    imageUrl: "https://opengraph.githubassets.com/1/ili23/cds-sp24-millennium",
+    githubLink: "https://github.com/ili23/cds-sp24-millennium",
+    presentationLink: null,
+    // tags: ["hey"]
+  },
+  {
+    semester: "Fall 2024",
+    title: "CDS X arXiv: Paper Moderation",
+    description: "This project is a collaboration between CDS and arXiv. The goal is to build a system that can automatically moderate papers submitted to arXiv. The system will use a combination of natural language processing and machine learning techniques to identify and flag potentially problematic papers.",
+    imageUrl: "https://opengraph.githubassets.com/1/CornellDataScience/arXiv-Paper-Moderation",
+    githubLink: null,
+    presentationLink: null,
+    // tags: ["hey"]
+  },
+  {
+    semester: "Fall 2024",
+    title: "FileBuddy",
+    description: "FileBuddy is a project that aims to build a system that can automatically manage files on a user's computer. It uses ReAct Agents to interact with the user and the file system.",
+    imageUrl: "https://opengraph.githubassets.com/1/CornellDataScience/file-buddy",
+    githubLink: "https://github.com/CornellDataScience/file-buddy",
+    presentationLink: null,
+    // tags: ["hey"]
+  },
+  {
     semester: "Spring 2024",
     title: "Pocket-ML",
     description:
@@ -264,6 +309,19 @@ const About: React.FC = () => {
                 </div>
               </div>
             ))}
+            <div className="mt-16 text-center">
+              <p className="text-xl font-light">
+                For more projects, you are welcome to visit our{" "}
+                <a
+                  href="https://github.com/CornellDataScience"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 underline"
+                >
+                  GitHub organization
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </Layout>
