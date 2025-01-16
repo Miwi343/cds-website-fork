@@ -18,11 +18,9 @@ import AliceImg from "../../assets/img/members/AliceUm.jpg";
 import TanishaImg from "../../assets/img/members/default.jpg";
 import KennethImg from "../../assets/img/members/KennethChiem.jpg";
 import YunooImg from "../../assets/img/members/YunooKim.jpg";
-import BensonImg from "../../assets/img/members/BensonZhang.jpg";
 import PeterImg from "../../assets/img/members/PeterFavero.jpg";
 import SamanthaImg from "../../assets/img/members/SamanthaVaca.jpg";
 import TanishImg from "../../assets/img/members/TanishTyagi.jpg";
-import SabrinaImg from "../../assets/img/members/default.jpg";
 import MinhajImg from "../../assets/img/members/default.jpg";
 import ProfDeSaImg from "../../assets/img/members/default.jpg";
 
@@ -119,12 +117,6 @@ const members = [
   },
   {
     title: "Member",
-    name: "Benson Zhang",
-    description: "Sample Text",
-    img: BensonImg.src,
-  },
-  {
-    title: "Member",
     name: "Peter Favero",
     description: "Sample Text",
     img: PeterImg.src,
@@ -140,12 +132,6 @@ const members = [
     name: "Tanish Tyagi",
     description: "Sample Text",
     img: TanishImg.src,
-  },
-  {
-    title: "Member",
-    name: "Sabrina Ning",
-    description: "Sample Text",
-    img: SabrinaImg.src,
   },
   {
     title: "Member",

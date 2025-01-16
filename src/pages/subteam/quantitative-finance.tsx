@@ -18,7 +18,6 @@ import CodyTorogovnikImg from "../../assets/img/members/default.jpg";
 import JerryWangImg from "../../assets/img/members/JerryWang.jpg";
 import IramLiuImg from "../../assets/img/members/IramLiu.jpg";
 import CoreyWangImg from "../../assets/img/members/CoreyWang.jpg";
-import ClaudiuIlloiImg from "../../assets/img/members/ClaudiuIllioi.jpg";
 import PeterHaImg from "../../assets/img/members/PeterHa.jpg";
 import NancyChenImg from "../../assets/img/members/NancyChen.jpg";
 import SantiagoPalaciosImg from "../../assets/img/members/SantiagoPalacios.jpg";
@@ -125,12 +124,6 @@ const members = [
     name: "Corey Wang",
     description: "Sample Text",
     img: CoreyWangImg.src,
-  },
-  {
-    title: "Member",
-    name: "Claudiu Illoi",
-    description: "Sample Text",
-    img: ClaudiuIlloiImg.src,
   },
   {
     title: "Member",

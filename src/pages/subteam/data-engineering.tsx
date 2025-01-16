@@ -15,12 +15,15 @@ import PunImg from "../../assets/img/members/default.jpg";
 import RyanHoImg from "../../assets/img/members/default.jpg";
 import AbigailImg from "../../assets/img/members/AbigailKim.jpg";
 import MaxImg from "../../assets/img/members/MaxWang.jpg";
+import BensonImg from "../../assets/img/members/BensonZhang.jpg";
 import SkaiImg from "../../assets/img/members/SkaiNzeuton.jpg";
 import CindyImg from "../../assets/img/members/CindyLi.jpg";
 import EllaImg from "../../assets/img/members/EllaSchneyer.jpg";
 import DanielImg from "../../assets/img/members/DanielWang.jpg";
 import TanviImg from "../../assets/img/members/default.jpg";
 import NathanImg from "../../assets/img/members/default.jpg";
+import ClaudiuIlloiImg from "../../assets/img/members/ClaudiuIllioi.jpg";
+import SabrinaImg from "../../assets/img/members/default.jpg";
 import LeonImg from "../../assets/img/members/default.jpg";
 import ProfTrummerImg from "../../assets/img/members/default.jpg";
 
@@ -99,6 +102,12 @@ const members = [
   },
   {
     title: "Member",
+    name: "Benson Zhang",
+    description: "Sample Text",
+    img: BensonImg.src,
+  },
+  {
+    title: "Member",
     name: "Skai Nzeuton",
     description: "Sample Text",
     img: SkaiImg.src,
@@ -132,6 +141,18 @@ const members = [
     name: "Nathan Chu",
     description: "Sample Text",
     img: NathanImg.src,
+  },
+  {
+    title: "Member",
+    name: "Claudiu Illoi",
+    description: "Sample Text",
+    img: ClaudiuIlloiImg.src,
+  },
+  {
+    title: "Member",
+    name: "Sabrina Ning",
+    description: "Sample Text",
+    img: SabrinaImg.src,
   },
   {
     title: "Member",
