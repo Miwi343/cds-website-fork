@@ -23,7 +23,7 @@ const projects = [
     to see how far take this and what insights we can gain.",
     imageUrl: vibeSyncImg,
     githubLink: "https://github.com/CornellDataScience/VibeSync",
-    presentationLink: "https://docs.google.com/presentation/d/1WGN3P-foXxiuJvLCvCNjYIwPKBWLJtSp1TFwnevkUaM",
+    presentationLink: "https://docs.google.com/presentation/d/1f7u4CF85lssMu_YZXPpxIRD8X9UnPsm6/",
     // tags: ["hey"]
   },
   {
