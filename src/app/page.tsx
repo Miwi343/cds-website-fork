@@ -138,7 +138,7 @@ export default function Home() {
           {/* darken image filter */}
           <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
 
-          {/* Cornell Giving Day Banner */}
+          {/* Cornell Giving Day Banner
           <div className="absolute top-[16.67vh] left-0 w-full bg-[#B31B1B] py-4 px-6 flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-4 z-10">
             <div className="text-xl sm:text-2xl font-semibold">Cornell Giving Day is here!</div>
             <div className="text-sm sm:text-base">Support Cornell Data Science and help us continue our mission</div>
@@ -150,7 +150,7 @@ export default function Home() {
             >
               Donate Now
             </a>
-          </div>
+          </div> */}
           <div className="font-light box-mobile absolute bottom-4 right-4 p-4 flex flex-col space-y-2 text-xs md:text-xs sm:text-xs">
             <div className="flex items-center">
               <div className="p-2 border-l border-white">
