@@ -235,7 +235,7 @@ const members = [
     name: "Srivatsa Kundurthy",
     description: "Sample Text",
     img: SrivatsaImg.src,
-    linkedin: "https://www.linkedin.com/in/riert", // LinkedIn URL from the data
+    linkedin: null, // LinkedIn URL from the data
   },
   {
     title: "Member",
