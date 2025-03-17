@@ -1,6 +1,8 @@
 import React from "react";
 import Layout from "@/components/Layout";
 import "../assets/css/about.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 import KojiImg from "../assets/img/members/KojiKimura.jpg";
 import AbbyImg from "../assets/img/members/AbigailKim.jpg";
@@ -17,48 +19,56 @@ const eboardMembers = [
     name: "Koji Kimura",
     description: "Sample Text",
     img: KojiImg.src,
+    linkedin: 'https://www.linkedin.com/in/koji-kimura-30471a233/', // No LinkedIn URL found in the data
   },
   {
     title: "Vice President",
     name: "Abigail Kim",
     description: "Sample Text",
     img: AbbyImg.src,
+    linkedin: null, // No LinkedIn URL found in the data
   },
   {
     title: "Business Chair",
     name: "Audrey Wang",
     description: "Sample Text",
     img: AudreyImg.src,
+    linkedin: "https://www.linkedin.com/in/audreywang12", // LinkedIn URL from the data
   },
   {
     title: "Technical Chair",
     name: "Daniel Wang",
     description: "Sample Text",
     img: DanielImg.src,
+    linkedin: 'https://www.linkedin.com/in/zhongxuanwang/',
   },
   {
     title: "Onboarding Chair",
     name: "Michael Ngo",
     description: "Sample Text",
     img: MichaelImg.src,
+    linkedin: null, // No LinkedIn URL found in the data
   },
   {
     title: "Social Chair",
     name: "Max Wang",
     description: "Sample Text",
     img: MaxImg.src,
+    linkedin: null, // No LinkedIn URL found in the data
   },
   {
     title: "Publicity Chair",
     name: "Cindy Li",
     description: "Sample Text",
     img: CindyImg.src,
+    linkedin: "https://www.linkedin.com/in/cindy-li-569a30187/", // LinkedIn URL from the data
   },
   {
     title: "Education Chair",
     name: "Srivatsa Kundurthy",
     description: "Sample Text",
     img: SriImg.src,
+    linkedin: "https://www.linkedin.com/in/riert", // LinkedIn URL from the data
   },
 ];
 
@@ -82,7 +92,23 @@ const Eboard: React.FC = () => {
                 <div className="text-3xl md:text-3xl text-light">
                   {member.name}
                 </div>
-                <div className="text-sm mt-5 text-gray-500">
+                <div className="flex items-center mt-2">
+                  {member.linkedin ? (
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-500 hover:text-blue-700"
+                    >
+                      <FontAwesomeIcon icon={faLinkedin} size="lg" />
+                    </a>
+                  ) : (
+                    <span className="text-gray-400">
+                      <FontAwesomeIcon icon={faLinkedin} size="lg" />
+                    </span>
+                  )}
+                </div>
+                <div className="text-sm mt-2 text-gray-500">
                   {/* {member.description} */}
                   {/* Learn More */}
                 </div>
