@@ -10,7 +10,6 @@ import TravisImg from "../../assets/img/members/TravisZhang.jpg";
 import VarunImg from "../../assets/img/members/default.jpg";
 import LauraImg from "../../assets/img/members/LauraGong.jpg";
 import ImaniImg from "../../assets/img/members/ImaniFinkley.jpg";
-import MichaelImg from "../../assets/img/members/MichaelNgo.jpg";
 import KatieImg from "../../assets/img/members/KatieZelvin.jpg";
 import EricGuoImg from "../../assets/img/members/EricGuo.jpg";
 import EricChenImg from "../../assets/img/members/default.jpg";
@@ -39,21 +38,29 @@ import MihirKulshreshtha from "../../assets/img/members/MihirKulshreshtha.jpg";
 import LetitiaSoare from "../../assets/img/members/LetitiaSoare.jpg";
 import LeoQian from "../../assets/img/members/LeoQian.jpg"
 import MichelleZhou from "../../assets/img/members/MichelleZhou.jpg"
+import JeromeHsu from "../../assets/img/members/default.jpg"
 
 const members = [
-  {
-    title: "Subteam Lead",
-    name: "Skyler Shapiro",
-    description: "Sample Text",
-    img: SkylerImg.src,
-    linkedin: null, // No LinkedIn URL found in the data
-  },
   {
     title: "Subteam Lead",
     name: "Mericel Tao",
     description: "Sample Text",
     img: MericelImg.src,
     linkedin: "https://www.linkedin.com/in/mericel-tao/", // LinkedIn URL from the data
+  },
+  {
+    title: "Subteam Lead",
+    name: "Deniz Boloni-Turgut",
+    description: "Sample Text",
+    img: DenizImg.src,
+    linkedin: "https://www.linkedin.com/in/deniz-bt/", // LinkedIn URL from the data
+  },
+  {
+    title: "Member",
+    name: "Skyler Shapiro",
+    description: "Sample Text",
+    img: SkylerImg.src,
+    linkedin: null, // No LinkedIn URL found in the data
   },
   {
     title: "Member",
@@ -95,13 +102,6 @@ const members = [
     name: "Imani Finkley",
     description: "Sample Text",
     img: ImaniImg.src,
-    linkedin: null, // No LinkedIn URL found in the data
-  },
-  {
-    title: "Member",
-    name: "Michael Ngo",
-    description: "Sample Text",
-    img: MichaelImg.src,
     linkedin: null, // No LinkedIn URL found in the data
   },
   {
@@ -159,13 +159,6 @@ const members = [
     description: "Sample Text",
     img: JasonImg.src,
     linkedin: null, // No LinkedIn URL found in the data
-  },
-  {
-    title: "Member",
-    name: "Deniz Boloni-Turgut",
-    description: "Sample Text",
-    img: DenizImg.src,
-    linkedin: "https://www.linkedin.com/in/deniz-bt/", // LinkedIn URL from the data
   },
   {
     title: "Member",
@@ -292,6 +285,13 @@ const members = [
     description: "Sample Text",
     img: MichelleZhou.src,
     linkedin: "https://www.linkedin.com/in/michelle-zhou-ai/"
+  },
+  {
+    title: "Member",
+    name: "Jerome Hsu",
+    description: "Sample Text",
+    img: JeromeHsu.src,
+    linkedin: null
   },
   {
     title: "Advisor",

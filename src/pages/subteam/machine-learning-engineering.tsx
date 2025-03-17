@@ -6,7 +6,6 @@ import Subteam from "@/components/Subteam";
 import ArnavImg from "../../assets/img/members/ArnavAgrawal.jpg";
 import EverettImg from "../../assets/img/members/EverettLee.jpg";
 import AndyImg from "../../assets/img/members/AndyHe.jpg";
-import AndrewImg from "../../assets/img/members/default.jpg";
 import NehaImg from "../../assets/img/members/NehaKulshreshtha.jpg";
 import EdwardImg from "../../assets/img/members/default.jpg";
 import MeiLinImg from "../../assets/img/members/MeiLinHu.jpg";
@@ -32,15 +31,9 @@ import KaitlynImg from "../../assets/img/members/default.jpg";
 import RahiImg from "../../assets/img/members/RahiDasgupta.jpg";
 import SucheerMaddury from "../../assets/img/members/SucheerMaddury.jpg";
 import EricZhou from "../../assets/img/members/EricZhou.jpg";
+import AdenZhao from "../../assets/img/members/default.jpg";
 
 const members = [
-  {
-    title: "Subteam Lead",
-    name: "Arnav Agrawal",
-    description: "Sample Text",
-    img: ArnavImg.src,
-    linkedin: null, // No LinkedIn URL found in the data
-  },
   {
     title: "Subteam Lead",
     name: "Everett Lee",
@@ -49,17 +42,24 @@ const members = [
     linkedin: "https://www.linkedin.com/in/everett-lee-6540b41b3/", // LinkedIn URL from the data
   },
   {
-    title: "Member",
-    name: "Andy He",
+    title: "Subteam Lead",
+    name: "Yunoo Kim",
     description: "Sample Text",
-    img: AndyImg.src,
+    img: YunooImg.src,
+    linkedin: "https://www.linkedin.com/in/yunoo-kim-2a6721280/",
+  },
+  {
+    title: "Member",
+    name: "Arnav Agrawal",
+    description: "Sample Text",
+    img: ArnavImg.src,
     linkedin: null, // No LinkedIn URL found in the data
   },
   {
     title: "Member",
-    name: "Andrew Chang",
+    name: "Andy He",
     description: "Sample Text",
-    img: AndrewImg.src,
+    img: AndyImg.src,
     linkedin: null, // No LinkedIn URL found in the data
   },
   {
@@ -131,13 +131,6 @@ const members = [
     description: "Sample Text",
     img: KennethImg.src,
     linkedin: null, // No LinkedIn URL found in the data
-  },
-  {
-    title: "Member",
-    name: "Yunoo Kim",
-    description: "Sample Text",
-    img: YunooImg.src,
-    linkedin: "https://www.linkedin.com/in/yunoo-kim-2a6721280/",
   },
   {
     title: "Member",
@@ -225,12 +218,18 @@ const members = [
   },
   {
     title: "Member",
+    name: "Aden Zhao",
+    description: "Sample Text",
+    img: AdenZhao.src,
+    linkedin: null,
+  },
+  {
+    title: "Member",
     name: "Eric Zhou",
     description: "Sample Text",
-    img: ErizZhou.src,
+    img: EricZhou.src,
     linkedin: "https://www.linkedin.com/in/ericzzhou/",
   },
-
   {
     title: "Advisor",
     name: "Prof. Christopher De Sa",

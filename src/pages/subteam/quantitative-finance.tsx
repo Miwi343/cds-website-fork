@@ -34,15 +34,9 @@ import LucasImg from "../../assets/img/members/LucasHe.jpg";
 import EdwinImg from "../../assets/img/members/EdwinLin.jpg";
 import ChenkaiImg from "../../assets/img/members/ChenkaiShen.jpg";
 import RonaldFeng from "../../assets/img/members/RonaldFeng.jpg";
+import AydanGerber from "../../assets/img/members/default.jpg";
 
 const members = [
-  {
-    title: "Subteam Lead",
-    name: "Jerry Chen",
-    description: "Sample Text",
-    img: JerryChenImg.src,
-    linkedin: null, // No LinkedIn URL found in the data
-  },
   {
     title: "Subteam Lead",
     name: "Elizabeth Song",
@@ -51,10 +45,24 @@ const members = [
     linkedin: "https://www.linkedin.com/in/elizabethyurisong/", // LinkedIn URL from the data
   },
   {
+    title: "Subteam Lead",
+    name: "Peter Ha",
+    description: "Sample Text",
+    img: PeterHaImg.src,
+    linkedin: null,
+  },
+  {
     title: "Member",
     name: "Tanvi Kapoor",
     description: "Sample Text",
     img: TanviKapoorImg.src,
+    linkedin: null, // No LinkedIn URL found in the data
+  },
+  {
+    title: "Member",
+    name: "Jerry Chen",
+    description: "Sample Text",
+    img: JerryChenImg.src,
     linkedin: null, // No LinkedIn URL found in the data
   },
   {
@@ -129,13 +137,6 @@ const members = [
   },
   {
     title: "Member",
-    name: "Jerry Wang",
-    description: "Sample Text",
-    img: JerryWangImg.src,
-    linkedin: "https://www.linkedin.com/in/jerry-wang2352/", // LinkedIn URL from the data
-  },
-  {
-    title: "Member",
     name: "Iram Liu",
     description: "Sample Text",
     img: IramLiuImg.src,
@@ -147,13 +148,6 @@ const members = [
     description: "Sample Text",
     img: CoreyWangImg.src,
     linkedin: null, // No LinkedIn URL found in the data
-  },
-  {
-    title: "Member",
-    name: "Peter Ha",
-    description: "Sample Text",
-    img: PeterHaImg.src,
-    linkedin: null,
   },
   {
     title: "Member",
@@ -252,6 +246,13 @@ const members = [
     description: "Sample Text",
     img: EvanImg.src,
     linkedin: "https://www.linkedin.com/in/evan-yang-8ab12b335/",
+  },
+  {
+    title: "Member",
+    name: "Aydan Gerber",
+    description: "Sample Text",
+    img: AydanGerber.src,
+    linkedin: null,
   },
   {
     title: "Advisor",
