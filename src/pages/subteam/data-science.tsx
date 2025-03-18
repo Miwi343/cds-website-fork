@@ -28,7 +28,7 @@ import AmrithImg from "../../assets/img/members/AmrithKumaar.jpg";
 import KaylaImg from "../../assets/img/members/KaylaShan.jpg";
 import SrivatsaImg from "../../assets/img/members/SrivatsaKundurthy.jpg";
 import JoyceImg from "../../assets/img/members/default.jpg";
-import TemiImg from "../../assets/img/members/default.jpg";
+import TemiImg from "../../assets/img/members/Temi.jpeg";
 import EricDoImg from "../../assets/img/members/EricDo.jpg";
 import MinhImg from "../../assets/img/members/default.jpg";
 import ProfWeinbergerImg from "../../assets/img/members/default.jpg";
@@ -242,7 +242,7 @@ const members = [
     name: "Temi Adebowale",
     description: "Sample Text",
     img: TemiImg.src,
-    linkedin: null, // No LinkedIn URL found in the data
+    linkedin: 'https://www.linkedin.com/in/temi-adebowale/',
   },
   {
     title: "Member",
