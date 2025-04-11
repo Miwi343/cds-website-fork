@@ -24,6 +24,8 @@ const Header: React.FC<HeaderProps> = ({ isHome }) => {
   const [inputValue, setInputValue] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const [hasOpenedSearchView, setHasOpenedSearchView] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [searchResponse, setSearchResponse] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const [fadeInClasses, setFadeInClasses] = useState<string[]>([
     "hidden",
@@ -71,6 +73,7 @@ const Header: React.FC<HeaderProps> = ({ isHome }) => {
   const toggleSearchView = () => {
     setIsMenuView(false);
     setIsSearchView(!isSearchView);
+    setSearchResponse(null); // Clear previous search results
   };
 
   // search input logic
@@ -83,6 +86,47 @@ const Header: React.FC<HeaderProps> = ({ isHome }) => {
   const clearInput = () => {
     setInputValue("");
     setIsTyping(false);
+    setSearchResponse(null);
+  };
+
+  // handle search submission
+  const handleSearchSubmit = async () => {
+    if (!inputValue.trim()) return;
+    
+    setIsLoading(true);
+    setSearchResponse(null);
+    
+    try {
+      const response = await fetch('http://localhost:8000/request_answer/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ query: inputValue }),
+      });
+      
+      const data = await response.json();
+      
+      if (response.ok) {
+        // Extract the response text from the Ollama response
+        const responseText = data.response || data.message || JSON.stringify(data);
+        setSearchResponse(responseText);
+      } else {
+        setSearchResponse(`Error: ${data.message || 'Failed to get response'}`);
+      }
+    } catch (error) {
+      console.error('Error fetching search results:', error);
+      setSearchResponse('Cannot connect to server, please try again later.');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  // handle enter key press
+  const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter') {
+      handleSearchSubmit();
+    }
   };
 
   // projects
@@ -421,7 +465,7 @@ const Header: React.FC<HeaderProps> = ({ isHome }) => {
       >
         <div
           style={{
-            transform: isTyping ? "translateY(10rem)" : "translateY(27rem)",
+            transform: isTyping || searchResponse ? "translateY(5rem)" : "translateY(27rem)",
           }}
           className={`flex w-full flex-col justify-center items-center transition-transform duration-300 transform`}
         >
@@ -433,6 +477,7 @@ const Header: React.FC<HeaderProps> = ({ isHome }) => {
                 className="w-full p-2 pl-1 text-3xl md:text-5xl bg-transparent text-white focus:outline-none border-b border-white"
                 value={inputValue}
                 onChange={handleInputChange}
+                onKeyPress={handleKeyPress}
                 ref={inputRef}
               />
               {inputValue && (
@@ -457,42 +502,80 @@ const Header: React.FC<HeaderProps> = ({ isHome }) => {
                 </button>
               )}
             </div>
+            
+            {/* Search button */}
+            {inputValue && (
+              <div className="mt-4 flex justify-center md:justify-start">
+                <button
+                  onClick={handleSearchSubmit}
+                  disabled={isLoading}
+                  className="px-4 py-2 bg-white text-black hover:bg-gray-200 transition-colors duration-300 rounded-md flex items-center"
+                >
+                  {isLoading ? (
+                    <>
+                      <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      Searching...
+                    </>
+                  ) : (
+                    <>
+                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                      </svg>
+                      Search
+                    </>
+                  )}
+                </button>
+              </div>
+            )}
+            
+            {/* Search response */}
+            {searchResponse && (
+              <div className="mt-8 p-4 bg-gray-800 bg-opacity-50 rounded-lg text-white">
+                <h3 className="text-xl font-semibold mb-2">Answer:</h3>
+                <div className="whitespace-pre-wrap">{searchResponse}</div>
+              </div>
+            )}
+            
             <div className="mt-4 text-white text-xs md:text-lg">
               <span className="block md:inline-block mr-4 text-xs md:text-base text-gray-400 whitespace-nowrap">
-                FREQUENTLY SEARCHED FOR
+                SAMPLE QUESTIONS
               </span>
-              <span className={`mr-4 ${fadeInClasses[0]}`}>
-                <Link
-                  href="/recruitment"
-                  className="underline hover:text-gray-400 transition-colors duration-300"
+              
+              {/* Sample questions for the RAG chatbot - easily changeable */}
+              <div className="mt-2 flex flex-wrap gap-2">
+                <button 
+                  onClick={() => {
+                    setInputValue("Tell me about the Mathsearch project");
+                    handleSearchSubmit();
+                  }}
+                  className={`px-3 py-1.5 bg-gray-700 hover:bg-gray-600 rounded-md text-xs md:text-sm transition-colors duration-300 ${fadeInClasses[0]}`}
                 >
-                  Recruitment
-                </Link>
-              </span>
-              <span className={`mr-4 ${fadeInClasses[1]}`}>
-                <Link
-                  href=""
-                  className="underline hover:text-gray-400 transition-colors duration-300"
+                  Tell me about the Mathsearch project
+                </button>
+                
+                <button 
+                  onClick={() => {
+                    setInputValue("How does Mathsearch download pdfs?");
+                    handleSearchSubmit();
+                  }}
+                  className={`px-3 py-1.5 bg-gray-700 hover:bg-gray-600 rounded-md text-xs md:text-sm transition-colors duration-300 ${fadeInClasses[1]}`}
                 >
-                  Info Sessions
-                </Link>
-              </span>
-              <span className={`mr-4 ${fadeInClasses[2]}`}>
-                <Link
-                  href=""
-                  className="underline hover:text-gray-400 transition-colors duration-300"
+                  How does Mathsearch download pdfs?
+                </button>
+                
+                <button 
+                  onClick={() => {
+                    setInputValue("What packages are used in CDS projects?");
+                    handleSearchSubmit();
+                  }}
+                  className={`px-3 py-1.5 bg-gray-700 hover:bg-gray-600 rounded-md text-xs md:text-sm transition-colors duration-300 ${fadeInClasses[2]}`}
                 >
-                  Coffee Chats
-                </Link>
-              </span>
-              <span className={`mr-4 ${fadeInClasses[3]}`}>
-                <Link
-                  href=""
-                  className="underline hover:text-gray-400 transition-colors duration-300"
-                >
-                  E-Board
-                </Link>
-              </span>
+                  What packages are used in CDS projects?
+                </button>
+              </div>
             </div>
           </div>
         </div>
