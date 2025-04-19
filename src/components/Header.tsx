@@ -97,7 +97,7 @@ const Header: React.FC<HeaderProps> = ({ isHome }) => {
     setSearchResponse(null);
     
     try {
-      const response = await fetch('http://localhost:8000/request_answer/', {
+      const response = await fetch('http://localhost:8000/rag-api/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
